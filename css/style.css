@@ -34,7 +34,7 @@
     --distance-itens: ;
 
     --borda: 1px solid #2d3950bb;
-     --borda-forte: 1px solid #4a5a78bb;
+    --borda-forte: 1px solid #4a5a78bb;
 }
 
 
@@ -55,6 +55,13 @@ body {
 
 h1 {
     font-weight: 600;
+}
+
+.fundo {
+    background-color: var(--contraste-fundo);
+    padding: var(--espacamento-interno-base);
+    border: var(--borda);
+    border-radius: var(--radius-base);
 }
 
 
@@ -185,10 +192,6 @@ main .area-de-pesquisa input::placeholder {
 }
 
 .gerenciamento {
-    background-color: var(--contraste-fundo);
-    border: var(--borda);
-    border-radius: var(--radius-base);
-    padding: var(--espacamento-interno-base);
     margin-top: 32px;
     display: flex;
     flex-flow: column nowrap;
@@ -224,12 +227,15 @@ main .area-de-pesquisa input::placeholder {
 }
 
 .gerenciamento hr {
-    width: 510px;
-    transform: translateX(-30px);
+    width: 111%;
+    margin-inline-start: -24px;
 }
 
 .categorias {
     width: 100%;
+    display: flex;
+    gap: var(--medida-media);
+    flex-flow: row wrap;
 }
 
 .categorias select {
@@ -237,6 +243,16 @@ main .area-de-pesquisa input::placeholder {
     border: var(--borda-forte);
     border-radius: var(--medida-pequena);
     color: var(--letras);
-    width: 49%;
-    padding: var(--medida-pequena) var(--medida-media);
+    padding: var(--medida-pequena);
+    outline: 1px solid #556073;
+    flex: 1;
 }
+
+/* .categorias select:focus {
+  background-color: var(--fundo-principal);
+  border-radius: 12px 12px 0px 0px;
+  border-color: var(--borda);
+}
+PARA DESKTOP
+*/
+

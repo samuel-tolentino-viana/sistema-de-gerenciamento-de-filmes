@@ -43,7 +43,7 @@
             </div>
         </section>
 
-        <section class="gerenciamento">
+        <section class="gerenciamento fundo">
             <div class="adicionar">
                 <div id="adicionar">
                     <p>+</p>
@@ -58,7 +58,7 @@
 
             <div class="categorias">
                 <select name="filmes" id="genero-de-filmes">
-                    <option class="title-options" value="" disabled selected>Selecione uma categoria</option>
+                    <option class="title-options" value="" disabled selected>Escolha uma categoria</option>
                     <option value="acao">Ação</option>
                     <option value="aventura">Aventura</option>
                     <option value="animacao">Animação</option>
@@ -74,8 +74,9 @@
                     <option value="isekai">Isekai</option>
                     <option value="esportes">Esportes</option>
                 </select>
+
                 <select name="stats" id="status">
-                    <option class="title-options" value="" disabled selected>Selecione um status</option>
+                    <option class="title-options" value="" disabled selected>Escolha um status</option>
                     <option value="assistidos">Assistidos</option>
                     <option value="nao-assistidos">Não Assistidos</option>
                     <option value="maiores-avaliacoes">Maiores Avaliações</option>
@@ -84,8 +85,27 @@
             </div>
         </section>
 
+        <section>
+            <article class="cartao-filme fundo">
+                <div class="filme-poster"><img src="" alt=""></div>
+                <div class="info-serie">
+                    <h3></h3>
+                    <p></p>
+                    <p></p>
+                    <span></span>
+                </div>
+                <div class="filme-acoes">
+                    <botoes></botoes>
+                    <botoes></botoes>
+                    <botoes></botoes>
+                </div>
+            </article>
+        </section>
+
     </main>
     <script src="js/script.js"></script>
 </body>
 
-</html>
+<!-- section>article.cartao-filme>(div.filme-poster>img)+(div.info-serie>h3+p+p+span)+(div.filme-acoes>botoes*3) -->
+
+</html
