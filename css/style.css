@@ -15,8 +15,6 @@
     --letras: #F3F4F9;
     --letras-secundaria: #899fca;
     --letras-destaque: #6776F7;
-    --fundo-filmes: #151F30;
-    --fundo-card-filme: #202C40;
     --botao-adicionar-filme1: #7882e0;
     --botao-adicionar-filme2: #5e6bdd;
 
@@ -30,6 +28,7 @@
     --radius-base: 14px;
 
     --espacamento-interno-base: 22px;
+    --espacamento-externo-base: 24px;
 
     --distance-itens: ;
 
@@ -143,6 +142,10 @@ main {
     padding: var(--medida-basica);
 }
 
+main section {
+    margin-bottom: var(--espacamento-externo-base);
+}
+
 main .informacoes-form .apresentacao {
     margin: 50px 0px 36px;
 }
@@ -218,7 +221,6 @@ main .area-de-pesquisa input::placeholder {
 .gerenciamento #adicionar p {
     font-size: 2rem;
     font-weight: 400;
-    transform: translateY(-4px);
 }
 
 .gerenciamento .info p {
@@ -247,7 +249,6 @@ main .area-de-pesquisa input::placeholder {
     outline: 1px solid #556073;
     flex: 1;
 }
-
 /* .categorias select:focus {
   background-color: var(--fundo-principal);
   border-radius: 12px 12px 0px 0px;
@@ -255,4 +256,3 @@ main .area-de-pesquisa input::placeholder {
 }
 PARA DESKTOP
 */
-
