@@ -15,8 +15,8 @@
     --letras: #F3F4F9;
     --letras-secundaria: #899fca;
     --letras-destaque: #6776F7;
-    --botao-adicionar-filme1: #7882e0;
-    --botao-adicionar-filme2: #5e6bdd;
+    --botao-adicionar-filme1: #5e6bdd;
+    --botao-adicionar-filme2: #7882e0;
 
     --medida-minima: 4px;
     --medida-pequena: 8px;
@@ -28,7 +28,7 @@
     --radius-base: 14px;
 
     --espacamento-interno-base: 22px;
-    --espacamento-externo-base: 24px;
+    --espacamento-externo-base: 16px;
 
     --distance-itens: ;
 
@@ -46,6 +46,7 @@ body {
     background-color: var(--fundo-principal);
     color: var(--letras);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 200000px;
 }
 
 .destaque {
@@ -77,11 +78,14 @@ header {
 header .cab-fixed {
     background-color: #252e3c6b;
     padding: var(--medida-pequena) var(--medida-media);
+    border-radius: var(--medida-grande);
+    border: var(--borda);
     backdrop-filter: blur(3px);
+    margin: var(--medida-media) var(--medida-basica);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 32px);
     z-index: 2;
     height: 52px;
 }
@@ -100,12 +104,18 @@ header .cabecalho div {
 }
 
 header .cabecalho .burguer {
-    scale: 1.4;
+    scale: 1.3;
+}
+
+header .cabecalho .movie {
+    scale: 1.8;
+    margin: 0px var(--medida-pequena) 0px var(--medida-basica);
+    color: var(--letras-destaque);
 }
 
 header .cabecalho .sun {
     background-color: #1d273a;
-    padding: 10px 8px;
+    padding: 9px 7px;
     border-radius: 50%;
     transform: translateY(1px);
 }
@@ -114,8 +124,8 @@ header .cabecalho .identificador {
     font-size: 1.3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #6775f7d7;
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -146,8 +156,11 @@ main section {
     margin-bottom: var(--espacamento-externo-base);
 }
 
+
+
+
 main .informacoes-form .apresentacao {
-    margin: 50px 0px 36px;
+    margin: 66px 0px var(--medida-basica);
 }
 
 main .area-de-pesquisa label {
@@ -164,7 +177,7 @@ main .apresentacao p {
 
 main .informacoes-form .area-de-pesquisa {
     background-color: var(--contraste-fundo);
-    border-radius: var(--medida-maxima);
+    border-radius: var(--medida-basica);
     padding: var(--medida-minima) var(--medida-basica);
     border: var(--borda);
 }
@@ -194,44 +207,28 @@ main .area-de-pesquisa input::placeholder {
     border: 0;
 }
 
-.gerenciamento {
-    margin-top: 32px;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: var(--medida-maxima);
-}
 
-.gerenciamento .adicionar {
-    display: flex;
-    align-items: center;
-    gap: var(--medida-grande);
-}
+
 
 .gerenciamento #adicionar {
-    border-radius: var(--medida-basica);
-    background-image: linear-gradient(45deg, var(--botao-adicionar-filme1), var(--botao-adicionar-filme2), var(--botao-adicionar-filme1));
-    min-width: 70px;
-    height: 70px;
+    border-radius: var(--medida-pequena);
+    background-image: linear-gradient(to left, var(--botao-adicionar-filme1), var(--botao-adicionar-filme2));
     border: 1px solid #878dc3;
+    padding: var(--medida-media);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .gerenciamento #adicionar p {
-    font-size: 2rem;
     font-weight: 400;
 }
 
-.gerenciamento .info p {
-    color: var(--letras-secundaria);
-    margin-top: var(--medida-minima);
+.gerenciamento #adicionar span {
+    
 }
 
-.gerenciamento hr {
-    width: 111%;
-    margin-inline-start: -24px;
-}
+
 
 .categorias {
     width: 100%;
@@ -240,7 +237,7 @@ main .area-de-pesquisa input::placeholder {
     flex-flow: row wrap;
 }
 
-.categorias select {
+.selecionar select {
     background-color: var(--contraste-fundo);
     border: var(--borda-forte);
     border-radius: var(--medida-pequena);
@@ -249,6 +246,7 @@ main .area-de-pesquisa input::placeholder {
     outline: 1px solid #556073;
     flex: 1;
 }
+
 /* .categorias select:focus {
   background-color: var(--fundo-principal);
   border-radius: 12px 12px 0px 0px;
