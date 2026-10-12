@@ -13,6 +13,7 @@
     <header>
 
         <section class="cab-fixed">
+
             <div class="cabecalho">
                 <div>
                     <i class="fa-solid fa-bars burguer"></i>
@@ -25,25 +26,35 @@
                     </div>
                 </div> <!-- CIRCULO PARA PERFIL -->
             </div>
+
         </section>
 
     </header>
     <main>
 
         <section class="informacoes-form">
+
             <div class="apresentacao">
+
                 <h1>Olá, <span class="destaque">Example!</span></h1>
                 <p>Sua coleção de filmes, séries e animes, em um só lugar.</p>
+
             </div>
+
             <div class="area-de-pesquisa">
+
                 <label for="nome-filme" class="sr-only">
                     Pesquisar filmes e séries
                 </label>
+
                 <label for="nome-filme">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </label>
+
                 <input type="text" name="nome-filme" id="nome-filme" placeholder="Pesquisa por título...">
+
             </div>
+
         </section>
 
         <section class="gerenciamento">
@@ -51,6 +62,52 @@
                 <span>+</span>
                 <p> Adicionar filme, série ou anime</p>
             </div>
+        </section>
+
+
+        <section class="atividade">
+
+            <div class="dominio-grid">
+
+                <div class="fundo item">
+                    <i class="fa-solid fa-video titulos"></i>
+                    <div class="info-ativid">
+                        <p>Títulos</p>
+                        <p class="numero">14</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="fundo item">
+                    <i class="fa-solid fa-circle-check assistidos"></i>
+                    <div class="info-ativid">
+                        <p>Assistidos</p>
+                        <p class="numero">2</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="fundo item">
+                    <i class="fa-solid fa-clock nao-assistidos"></i>
+                    <div class="info-ativid">
+                        <p>Não Assistidos</p>
+                        <p class="numero">
+                        9</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="fundo item">
+                    <i class="fa-solid fa-star nota-media"></i>
+                    <div class="info-ativid">
+                        <p>Nota Média</p>
+                        <p class="numero">9.14</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+            </div>
+
         </section>
 
         <section class="selecionar">
@@ -81,9 +138,9 @@
                         <option value="menores-avaliacoes">Menores Avaliações</option>
                     </select>
                 </div>
-                <div class="controle-de-grid">
-                    <i class="fa-brands fa-microsoft selecionado"></i>
-                    <i class="fa-solid fa-list"></i>
+                <div class="controle">
+                    <div class="selecionado" id="select"><i class="fa-brands fa-microsoft selecionado"></i></div>
+                    <div class="" id="select"><i class="fa-solid fa-list"></i></div>
                 </div>
             </div>
         </section>

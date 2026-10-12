@@ -10,16 +10,39 @@
 }
 
 :root {
+
+    /* Fundo */
     --fundo-principal: #111927;
     --contraste-fundo: #1e283b;
+
+    /* Letras */
     --letras: #F3F4F9;
     --letras-secundaria: #899fca;
     --letras-destaque: #6776F7;
+
+    /* Botões adicionar */
     --botao-adicionar-filme1: #5e6bdd;
     --botao-adicionar-filme2: #7882e0;
 
     --destaque: #6776F7;
 
+    /* Títulos — Roxo */
+    --cor-titulos: #7770FF;
+    --cor-titulos-fundo: #1D2854;
+
+    /* Assistidos — Verde */
+    --cor-assistidos: #35E9A0;
+    --cor-assistidos-fundo: #073B32;
+
+    /* Não assistidos — Laranja */
+    --cor-nao-assistidos: #FF941F;
+    --cor-nao-assistidos-fundo: #3A2924;
+
+    /* Nota média — Amarelo */
+    --cor-nota-media: #FFC928;
+    --cor-nota-media-fundo: #303023;
+
+    /* Medidas */
     --medida-minima: 4px;
     --medida-pequena: 8px;
     --medida-media: 12px;
@@ -33,8 +56,7 @@
     --espacamento-externo-base-dist: 16px;
     --espacamento-externo-base-pert: 12px;
 
-    
-
+    /* Bordas */
     --borda: 1px solid #2d3950bb;
     --borda-forte: 1px solid #4a5a7805;
 }
@@ -69,6 +91,21 @@ h1 {
 
 .selecionado {
     background-color: var(--destaque);
+    padding: 5px;
+    border-radius: var(--medida-pequena);
+}
+
+
+
+/* ITENS ATIVIDADE */
+
+
+
+.titulos {
+    color: var(--cor-titulos);
+    background-color: var(--cor-titulos-fundo);
+    padding: var(--medida-basica);
+    font-size: 1.5rem;
 }
 
 
@@ -245,6 +282,7 @@ main .area-de-pesquisa input::placeholder {
     justify-content: space-between;
     align-items: center;
     flex-flow: row nowrap;
+    height: 30px;
 }
 
 .selecionar .categorias .selecao {
@@ -255,11 +293,11 @@ main .area-de-pesquisa input::placeholder {
 .selecionar select {
     background-color: var(--fundo-principal);
     border: var(--borda-forte);
-    border-radius: var(--medida-pequena);
     color: var(--letras);
-    padding: 6px;
     outline: 1px solid #556073;
+    padding: 8px;
 }
+
 /* .categorias select:focus {
   background-color: var(--fundo-principal);
   border-radius: 12px 12px 0px 0px;
@@ -268,9 +306,37 @@ main .area-de-pesquisa input::placeholder {
 PARA DESKTOP
 */
 
-.selecionar .controle-de-grid {
+.selecionar .controle {
     background-color: var(--contraste-fundo);
-    padding: 6px;
+    display: flex;
+    gap: var(--medida-pequena);
+}
+
+.selecionar .selecionado,
+.selecionar .controle {
+    font-size: 16px;
+}
+
+.selecionar select,
+.selecionar .controle {
     border-radius: var(--medida-pequena);
+}
+
+.selecionar .controle:nth-last-child(1) {
+    display: flex;
+    padding-right: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.atividade .dominio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--medida-pequena) var(--medida-media);
+}
+
+.atividade .item {
+    display: flex;
+    gap: var(--medida-media);
 }
 
