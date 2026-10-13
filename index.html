@@ -82,6 +82,17 @@
 
                 <div class="fundo item">
                     <div class="icon-classificacao">
+                        <i class="fa-solid fa-star nota-media"></i>
+                        <div class="info-ativid">
+                            <p>Nota Média</p>
+                            <p class="numero">9.14</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta-direita"></i>
+                </div>
+
+                <div class="fundo item">
+                    <div class="icon-classificacao">
                         <i class="fa-solid fa-circle-check assistidos"></i>
                         <div class="info-ativid">
                             <p>Assistidos</p>
@@ -96,18 +107,7 @@
                         <i class="fa-solid fa-clock nao-assistidos"></i>
                         <div class="info-ativid">
                             <p>Não Assistidos</p>
-                            <p class="numero">9</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right seta-direita"></i>
-                </div>
-
-                <div class="fundo item">
-                    <div class="icon-classificacao">
-                        <i class="fa-solid fa-star nota-media"></i>
-                        <div class="info-ativid">
-                            <p>Nota Média</p>
-                            <p class="numero">9.14</p>
+                            <p class="numero">12</p>
                         </div>
                     </div>
                     <i class="fa-solid fa-chevron-right seta-direita"></i>
@@ -163,24 +163,26 @@
 
         </section>
 
-        <section>
+        <section class="catalogo-filmes">
+
 
             <article class="cartao-filme fundo">
 
                 <div class="filme-poster">
-                    <img src="" alt="">
+                    <!-- <img src="" alt="Imagem do filme: como treinar o seu dragão 3"> -->
+                    <div class="depois"></div>
                 </div>
 
                 <div class="info-serie">
                     <h3>Como Treinar o seu Dragão 3</h3>
-                    <p>Fantasia</p>
+                    <p class="genero">Fantasia</p>
 
                     <div>
                         <p class="nota-do-filme">
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star nota"></i>
                             7.9
                         </p>
-                        <span>
+                        <span class="assistido">
                             <i class="fa-solid fa-circle-check"></i>
                             assistido
                         </span>
@@ -189,23 +191,62 @@
                 </div>
 
                 <div class="filme-acoes">
-                    <botoes>
+                    <button type="button">
                         <i class="fa-solid fa-circle-info"></i>
-                    </botoes>
-                    <botoes>
+                    </button>
+                    <button type="button">
                         <i class="fa-solid fa-pen"></i>
-                    </botoes>
-                    <botoes>
+                    </button>
+                    <button class="delete" type="button">
                         <i class="fa-solid fa-trash"></i>
-                    </botoes>
+                    </button>
                 </div>
 
             </article>
+
+            <article class="cartao-filme fundo">
+
+                <div class="filme-poster">
+                    <!-- <img src="" alt="Imagem do filme: demon slayer castelo infinito I"> -->
+                    <div class="depois"></div>
+                </div>
+
+                <div class="info-serie">
+                    <h3>Demon Slayer: castelo infinito</h3>
+                    <p class="genero">Fantasia</p>
+
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-star nota"></i>
+                            8.3
+                        </p>
+                        <span class="assistido">
+                            <i class="fa-solid fa-circle-check"></i>
+                            assistido
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="filme-acoes">
+                    <button type="button">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </button>
+                    <button type="button">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="delete" type="button">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+
+            </article>
+
         </section>
     </main>
     <script src="js/script.js"></script>
 </body>
 
-<!-- section>article.cartao-filme>(div.filme-poster>img)+(div.info-serie>h3+p+p+span)+(div.filme-acoes>botoes*3) -->
+<!-- article.cartao-filme.fundo>(div.filme-poster>div.depois)+(div.info-serie>h3+p.genero+div.>p+span)+(div.filme-acoes>button*3) -->
 
 </html
