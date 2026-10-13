@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    color: white;
+  background-color: #0066FF;
+}
+
 :root {
 
     /* Fundo */
