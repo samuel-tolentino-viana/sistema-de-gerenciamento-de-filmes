@@ -27,8 +27,8 @@
     --destaque: #6776F7;
 
     /* Títulos — Roxo */
-    --cor-titulos: #7770FF;
-    --cor-titulos-fundo: #1D2854;
+    --cor-titulos: #9d99ee;
+    --cor-titulos-fundo: #364069;
 
     /* Assistidos — Verde */
     --cor-assistidos: #35E9A0;
@@ -52,7 +52,7 @@
 
     --radius-base: 14px;
 
-    --espacamento-interno-base: 22px;
+    --espacamento-interno-base: 16px 14px;
     --espacamento-externo-base-dist: 16px;
     --espacamento-externo-base-pert: 12px;
 
@@ -101,11 +101,42 @@ h1 {
 
 
 
+.titulos, .assistidos, .nao-assistidos, .nota-media {
+    border-radius: var(--medida-pequena);
+    padding: var(--medida-basica);
+    width: 25px;
+    height: 25px;
+}
+
 .titulos {
     color: var(--cor-titulos);
     background-color: var(--cor-titulos-fundo);
-    padding: var(--medida-basica);
+}
+
+.assistidos {
+    color: var(--cor-assistidos);
+    background-color: var(--cor-assistidos-fundo);
+}
+
+.nao-assistidos {
+    color: var(--cor-nao-assistidos);
+    background-color: var(--cor-nao-assistidos-fundo);
+}
+
+.nota-media {
+    color: var(--cor-nota-media);
+    background-color: var(--cor-nota-media-fundo);
+}
+
+.item .info-ativid:nth-child(2) {
+    color: var(--letras-secundaria);
+    font-size: 0.9rem;
+}
+
+.item .numero {
+    color: white;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 
@@ -155,6 +186,11 @@ header .cabecalho .movie {
     scale: 1.8;
     margin: 0px var(--medida-pequena) 0px var(--medida-basica);
     color: var(--letras-destaque);
+}
+
+header .cabecalho:nth-child(1) a {
+    text-decoration: none;
+    color: white;
 }
 
 header .cabecalho .sun {
@@ -261,7 +297,7 @@ main .area-de-pesquisa input::placeholder {
     border-radius: var(--medida-pequena);
     background-image: linear-gradient(to left, var(--botao-adicionar-filme1), var(--botao-adicionar-filme2));
     border: 1px solid #878dc3;
-    padding: var(--medida-pequena);
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,6 +308,31 @@ main .area-de-pesquisa input::placeholder {
     scale: 1.6;
     translate: -8px -2px;
     font-weight: 600;
+}
+
+
+
+.atividade .dominio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--medida-pequena) var(--medida-media);
+}
+
+.atividade .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px var(--medida-pequena);
+}
+
+.atividade .item .icon-classificacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.atividade .item .seta-direita {
+    font-size: 0.8rem;
 }
 
 
@@ -324,19 +385,13 @@ PARA DESKTOP
 
 .selecionar .controle:nth-last-child(1) {
     display: flex;
-    padding-right: 8px;
+    padding-right: 9px;
     align-items: center;
     justify-content: center;
 }
 
-.atividade .dominio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--medida-pequena) var(--medida-media);
-}
 
-.atividade .item {
-    display: flex;
-    gap: var(--medida-media);
-}
+
+/*  */
+
 

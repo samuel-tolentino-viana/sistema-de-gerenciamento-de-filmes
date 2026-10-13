@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <header>
+    <header id="topo">
 
         <section class="cab-fixed">
 
             <div class="cabecalho">
                 <div>
                     <i class="fa-solid fa-bars burguer"></i>
-                    <p><i class="fa-solid fa-film movie"></i> Filmes, séries & Animes</p>
+                    <a href="#topo"><i class="fa-solid fa-film movie"></i> Filmes, séries & Animes</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-sun sun"></i>
@@ -70,40 +70,47 @@
             <div class="dominio-grid">
 
                 <div class="fundo item">
-                    <i class="fa-solid fa-video titulos"></i>
-                    <div class="info-ativid">
-                        <p>Títulos</p>
-                        <p class="numero">14</p>
+                    <div class="icon-classificacao">
+                        <i class="fa-solid fa-video titulos"></i>
+                        <div class="info-ativid">
+                            <p>Títulos</p>
+                            <p class="numero">14</p>
+                        </div>
                     </div>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
                 <div class="fundo item">
-                    <i class="fa-solid fa-circle-check assistidos"></i>
-                    <div class="info-ativid">
-                        <p>Assistidos</p>
-                        <p class="numero">2</p>
+                    <div class="icon-classificacao">
+                        <i class="fa-solid fa-circle-check assistidos"></i>
+                        <div class="info-ativid">
+                            <p>Assistidos</p>
+                            <p class="numero">2</p>
+                        </div>
                     </div>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
                 <div class="fundo item">
-                    <i class="fa-solid fa-clock nao-assistidos"></i>
-                    <div class="info-ativid">
-                        <p>Não Assistidos</p>
-                        <p class="numero">
-                        9</p>
+                    <div class="icon-classificacao">
+                        <i class="fa-solid fa-clock nao-assistidos"></i>
+                        <div class="info-ativid">
+                            <p>Não Assistidos</p>
+                            <p class="numero">9</p>
+                        </div>
                     </div>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
                 <div class="fundo item">
-                    <i class="fa-solid fa-star nota-media"></i>
-                    <div class="info-ativid">
-                        <p>Nota Média</p>
-                        <p class="numero">9.14</p>
+                    <div class="icon-classificacao">
+                        <i class="fa-solid fa-star nota-media"></i>
+                        <div class="info-ativid">
+                            <p>Nota Média</p>
+                            <p class="numero">9.14</p>
+                        </div>
                     </div>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
             </div>
@@ -111,8 +118,11 @@
         </section>
 
         <section class="selecionar">
+
             <div class="categorias">
+
                 <div class="selecao">
+
                     <select name="filmes" id="genero-de-filmes">
                         <option class="title-options" value="" disabled selected>Categoria</option>
                         <option value="acao">Ação</option>
@@ -130,6 +140,7 @@
                         <option value="isekai">Isekai</option>
                         <option value="esportes">Esportes</option>
                     </select>
+
                     <select name="stats" id="status">
                         <option class="title-options" value="" disabled selected>Status</option>
                         <option value="assistidos">Assistidos</option>
@@ -137,12 +148,59 @@
                         <option value="maiores-avaliacoes">Maiores Avaliações</option>
                         <option value="menores-avaliacoes">Menores Avaliações</option>
                     </select>
+
                 </div>
+
                 <div class="controle">
+
                     <div class="selecionado" id="select"><i class="fa-brands fa-microsoft selecionado"></i></div>
+
                     <div class="" id="select"><i class="fa-solid fa-list"></i></div>
+
                 </div>
+
             </div>
+
+        </section>
+
+        <section>
+
+            <article class="cartao-filme fundo">
+
+                <div class="filme-poster">
+                    <img src="" alt="">
+                </div>
+
+                <div class="info-serie">
+                    <h3>Como Treinar o seu Dragão 3</h3>
+                    <p>Fantasia</p>
+
+                    <div>
+                        <p class="nota-do-filme">
+                            <i class="fa-solid fa-star"></i>
+                            7.9
+                        </p>
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            assistido
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="filme-acoes">
+                    <botoes>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </botoes>
+                    <botoes>
+                        <i class="fa-solid fa-pen"></i>
+                    </botoes>
+                    <botoes>
+                        <i class="fa-solid fa-trash"></i>
+                    </botoes>
+                </div>
+
+            </article>
         </section>
     </main>
     <script src="js/script.js"></script>
