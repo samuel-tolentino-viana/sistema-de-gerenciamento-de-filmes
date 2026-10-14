@@ -442,6 +442,20 @@ PARA DESKTOP
     gap: var(--espacamento-externo-base-pert);
 }
 
+.catalogo-filmes img {
+    width: 100%;
+    border-radius: var(--radius-base);
+    height: 120px;
+}
+
+.catalogo-filmes .completo {
+    object-fit: fill;
+}
+
+.catalogo-filmes .filme-poster {
+    margin: -8px;
+}
+
 .catalogo-filmes .info-serie h3 {
     padding: 8px 0px 4px;
 }
@@ -523,6 +537,14 @@ PARA DESKTOP
     grid-column: 1/-1;
 }
 
+.card-new-film img {
+    height: auto;
+}
+
+.card-new-film .filme-poster {
+    margin: 0;
+}
+
 .card-new-film .depois {
     height: 230px;
 }
@@ -530,6 +552,7 @@ PARA DESKTOP
 .card-new-film h3 {
     text-align: center;
     font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.498);
 }
 
 .card-new-film button {
@@ -542,10 +565,10 @@ PARA DESKTOP
 }
 
 .card-new-film span {
-    color: var(--cor-nao-assistido);
-    background-color: var(--cor-nao-assistido-fundo);
+    color: var(--cor-nao-assistidos);
+    background-color: var(--cor-nao-assistidos-fundo);
     padding: var(--medida-pequena);
-    box-shadow: 1px 1px 3px #3A2924;
+    box-shadow: 2px 2px 3px #2a1711;
     border-radius: var(--medida-pequena);
 }
 
@@ -569,3 +592,14 @@ PARA DESKTOP
     background-color: #fa22224d;
 }
 
+
+
+/* FOOTER */
+
+
+
+footer p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: var(--medida-grande);
+}
