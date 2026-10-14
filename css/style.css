@@ -11,7 +11,7 @@
 
 ::selection {
     color: white;
-  background-color: #0066FF;
+    background-color: #0066FF;
 }
 
 :root {
@@ -36,10 +36,6 @@
     --cor-titulos: #9d99ee;
     --cor-titulos-fundo: #364069;
 
-    /* Assistidos — Verde */
-    --cor-assistidos: #35E9A0;
-    --cor-assistidos-fundo: #073B32;
-
     /* Não assistidos — Laranja */
     --cor-nao-assistidos: #FF941F;
     --cor-nao-assistidos-fundo: #3A2924;
@@ -47,6 +43,14 @@
     /* Nota média — Amarelo */
     --cor-nota-media: #FFC928;
     --cor-nota-media-fundo: #303023;
+
+    /* Assistidos — Verde */
+    --cor-assistidos: #35E9A0;
+    --cor-assistidos-fundo: #073B32;
+
+    /* Não assisrido - vermelho */
+    --cor-nao-assistido: #ff5555;
+    --cor-nao-assistido-fundo: #ff000040;
 
     /* Deletar - Vermelho */
     --cor-deletar: #ec4040;
@@ -106,7 +110,7 @@ h1 {
 
 .depois {
     width: 100%;
-    height: 150px;
+    height: 135px;
     background-color: var(--fundo-principal);
     border: var(--borda);
     border-radius: var(--medida-media);
@@ -118,7 +122,10 @@ h1 {
 
 
 
-.titulos, .assistidos, .nao-assistidos, .nota-media {
+.titulos,
+.assistidos,
+.nao-assistidos,
+.nota-media {
     border-radius: var(--medida-pequena);
     padding: var(--medida-basica);
     width: 25px;
@@ -154,6 +161,20 @@ h1 {
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+
+
+/* FILMES */
+
+
+
+.doomsday {
+    background-image: linear-gradient(150deg, #1A4314 40%, #027d3e);
+}
+
+.god-valey {
+    background-image: linear-gradient(135deg, #004E64 0%, #4A5568 100%);
 }
 
 
@@ -440,12 +461,23 @@ PARA DESKTOP
     color: var(--cor-nota-media);
 }
 
-.catalogo-filmes .info-serie .assistido {
-    color: var(--cor-assistidos);
-    background-color: var(--cor-assistidos-fundo);
-    padding: var(--medida-pequena) 10px;
+
+.assistido,
+.nao-assistido {
+    padding: 4px 6px;
     border-radius: 99999px;
 }
+
+.assistido {
+    color: var(--cor-assistidos);
+    background-color: var(--cor-assistidos-fundo);
+}
+
+.nao-assistido {
+    color: var(--cor-nao-assistido);
+    background-color: var(--cor-nao-assistido-fundo);
+}
+
 
 .catalogo-filmes .filme-acoes {
     display: flex;
@@ -481,3 +513,59 @@ PARA DESKTOP
     color: var(--cor-deletar);
     background-color: var(--cor-deletar-fundo);
 }
+
+
+.catalogo-filmes .info-serie .destaque-centro {
+    text-align: center;
+}
+
+.card-new-film {
+    grid-column: 1/-1;
+}
+
+.card-new-film .depois {
+    height: 230px;
+}
+
+.card-new-film h3 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.card-new-film button {
+    border: var(--borda);
+    margin-top: 0;
+}
+
+.card-new-film .info-serie .info-new-film {
+    margin-top: var(--medida-media);
+}
+
+.card-new-film span {
+    color: var(--cor-nao-assistido);
+    background-color: var(--cor-nao-assistido-fundo);
+    padding: var(--medida-pequena);
+    box-shadow: 1px 1px 3px #3A2924;
+    border-radius: var(--medida-pequena);
+}
+
+.card-new-film:nth-child(1) button:nth-child(1),
+.card-new-film:nth-child(1) button:nth-child(2) {
+    background-color: #4b9561bb;
+}
+
+.card-new-film:nth-child(1) button:nth-child(3) {
+    color: #fc4545;
+    background-color: #ff00007b;
+}
+
+.card-new-film:nth-child(2) button:nth-child(1),
+.card-new-film:nth-child(2) button:nth-child(2) {
+    background-color: #586b8ed5;
+}
+
+.card-new-film:nth-child(2) button:nth-child(3) {
+    color: #ff4c4c;
+    background-color: #fa22224d;
+}
+
