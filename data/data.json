@@ -1,0 +1,74 @@
+[
+    {
+        "titulo": "Como Treinar o seu Dragão 3",
+        "genero": "Fantasia",
+        "conteudo": "filme",
+        "estadoDoFilme": "assistido",
+        "modo": "lancado",
+        "imagemCompleta": false,
+        "notaDoFilme": 7.9
+    },
+    {
+        "titulo": "Demon Slayer: Castelo Infinito",
+        "genero": "Fantasia Sombira",
+        "conteudo": "anime",
+        "estadoDoFilme": "assistido",
+        "modo": "lancado",
+        "imagemCompleta": true,
+        "notaDoFilme": 8.3
+    },
+    {
+        "titulo": "Loki",
+        "genero": "Ficção Cientifica",
+        "conteudo": "serie",
+        "estadoDoFilme": "naoAssistido",
+        "modo": "lancado",
+        "imagemCompleta": false,
+        "notaDoFilme": 8.2
+    },
+    {
+        "titulo": "Barbie",
+        "genero": "Comédia",
+        "conteudo": "serie",
+        "estadoDoFilme": "assistido",
+        "modo": "lancado",
+        "imagemCompleta": false,
+        "notaDoFilme": 7.0
+    },
+    {
+        "titulo": "WALL-E",
+        "genero": "Românce",
+        "conteudo": "filme",
+        "estadoDoFilme": "assistido",
+        "modo": "lancado",
+        "imagemCompleta": false,
+        "notaDoFilme": 8.4
+    },
+    {
+        "titulo": "One Piece",
+        "genero": "Shounen",
+        "conteudo": "anime",
+        "estadoDoFilme": "assistido",
+        "modo": "lancado",
+        "imagemCompleta": true,
+        "notaDoFilme": 9.0
+    },
+    {
+        "titulo": "Ragnarock",
+        "genero": "Ação",
+        "conteudo": "anime",
+        "estadoDoFilme": "naoAssistido",
+        "modo": "lancado",
+        "imagemCompleta": false,
+        "notaDoFilme": 7.6
+    },
+    {
+        "titulo": "Round 6",
+        "genero": "Drama",
+        "conteudo": "serie",
+        "estadoDoFilme": "assistido",
+        "modo": "lancado",
+        "imagemCompleta": false,
+        "notaDoFilme": 7.9
+    }
+]
