@@ -6,7 +6,8 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 7.9
+        "notaDoFilme": 7.9,
+        "poster": "./images/filmes/como-treinar-seu-dragao-3.png"
     },
     {
         "titulo": "Demon Slayer: Castelo Infinito",
@@ -15,7 +16,8 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": true,
-        "notaDoFilme": 8.3
+        "notaDoFilme": 8.3,
+        "poster": "./images/animes/castelo-infinito.jpg"
     },
     {
         "titulo": "Loki",
@@ -24,7 +26,8 @@
         "estadoDoFilme": "naoAssistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 8.2
+        "notaDoFilme": 8.2,
+        "poster": "./images/series/loki.jpg"
     },
     {
         "titulo": "Barbie",
@@ -33,7 +36,8 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 7.0
+        "notaDoFilme": 7.0,
+        "poster": "./images/filmes/barbie.jpg"
     },
     {
         "titulo": "WALL-E",
@@ -42,7 +46,8 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 8.4
+        "notaDoFilme": 8.4,
+        "poster": "./images/filmes/wall-e.webp"
     },
     {
         "titulo": "One Piece",
@@ -51,7 +56,8 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": true,
-        "notaDoFilme": 9.0
+        "notaDoFilme": 9.0,
+        "poster": "./images/animes/one-piece.webp"
     },
     {
         "titulo": "Ragnarock",
@@ -60,7 +66,8 @@
         "estadoDoFilme": "naoAssistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 7.6
+        "notaDoFilme": 7.6,
+        "poster": "./images/animes/record-of-ragnarock.webp"
     },
     {
         "titulo": "Round 6",
@@ -69,6 +76,7 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 7.9
+        "notaDoFilme": 7.9,
+        "poster": "./images/series/round-6.avif"
     }
 ]

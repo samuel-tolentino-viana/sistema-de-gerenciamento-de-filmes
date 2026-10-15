@@ -36,6 +36,7 @@ function posterFilm(dads, cardPai) {
     cardPai.appendChild(areaPoster);
 
     const imagem = document.createElement('img');
+    imagem.src = dads.poster;
 
     if (dads.imagemCompleta) {
         imagem.classList.add('completo');
