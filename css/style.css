@@ -449,7 +449,8 @@ PARA DESKTOP
 }
 
 .catalogo-filmes .completo {
-    object-fit: fill;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .catalogo-filmes .filme-poster {

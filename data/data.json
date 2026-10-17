@@ -7,7 +7,8 @@
         "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.9,
-        "poster": "./images/filmes/como-treinar-seu-dragao-3.png"
+        "poster": "./images/filmes/como-treinar-seu-dragao-3.png",
+        "naTela": true
     },
     {
         "titulo": "Demon Slayer: Castelo Infinito",
@@ -17,7 +18,8 @@
         "modo": "lancado",
         "imagemCompleta": true,
         "notaDoFilme": 8.3,
-        "poster": "./images/animes/castelo-infinito.jpg"
+        "poster": "./images/animes/castelo-infinito.jpg",
+        "naTela": true
     },
     {
         "titulo": "Loki",
@@ -25,9 +27,10 @@
         "conteudo": "serie",
         "estadoDoFilme": "naoAssistido",
         "modo": "lancado",
-        "imagemCompleta": false,
+        "imagemCompleta": true,
         "notaDoFilme": 8.2,
-        "poster": "./images/series/loki.jpg"
+        "poster": "./images/series/loki.jpg",
+        "naTela": true
     },
     {
         "titulo": "Barbie",
@@ -37,7 +40,8 @@
         "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.0,
-        "poster": "./images/filmes/barbie.jpg"
+        "poster": "./images/filmes/barbie.jpg",
+        "naTela": true
     },
     {
         "titulo": "WALL-E",
@@ -47,7 +51,8 @@
         "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 8.4,
-        "poster": "./images/filmes/wall-e.webp"
+        "poster": "./images/filmes/wall-e.webp",
+        "naTela": true
     },
     {
         "titulo": "One Piece",
@@ -57,7 +62,8 @@
         "modo": "lancado",
         "imagemCompleta": true,
         "notaDoFilme": 9.0,
-        "poster": "./images/animes/one-piece.webp"
+        "poster": "./images/animes/one-piece.webp",
+        "naTela": true
     },
     {
         "titulo": "Ragnarock",
@@ -67,7 +73,8 @@
         "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.6,
-        "poster": "./images/animes/record-of-ragnarock.webp"
+        "poster": "./images/animes/record-of-ragnarock.webp",
+        "naTela": true
     },
     {
         "titulo": "Round 6",
@@ -77,6 +84,7 @@
         "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.9,
-        "poster": "./images/series/round-6.avif"
+        "poster": "./images/series/round-6.avif",
+        "naTela": true
     }
 ]
