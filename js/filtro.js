@@ -1,32 +1,74 @@
+// AUXILIO DE INTELIGENCIA ARTIFICIAL
 const generoFilme = document.getElementById('genero-do-filme');
 const statusFilme = document.getElementById('status');
 
+let generoSelecionado = 'Todos';
+let statusSelecionado = 'Todos';
 
-fetch('./data/data.json')
+generoFilme.addEventListener('change', (event) => {
+    generoSelecionado = event.target.value === 'todos'
+        ? 'Todos'
+        : event.target.options[event.target.selectedIndex].text;
 
-    .then(resposta => {
-        return resposta.json();
-    })
-    .then(dadosCompletos => {
+    filtrar();
+});
 
-        generoFilme.addEventListener('change', (event) => {
+statusFilme.addEventListener('change', (event) => {
+    statusSelecionado = event.target.options[event.target.selectedIndex].text;
+    filtrar();
+});
 
-            let itemSelecionado = event.target.options[event.target.selectedIndex].text;
+function filtrar() {
+    const catalogo = document.querySelector('.catalogo-filmes');
+    const cardFilmes = [...catalogo.querySelectorAll('article')];
 
-            filtrar(itemSelecionado);
+    // Ordenar pelas notas
+    if (
+        statusSelecionado === 'Maiores Avaliações' ||
+        statusSelecionado === 'Menores Avaliações'
+    ) {
+        cardFilmes.sort((a, b) => {
+            const notaA = Number(a.dataset.notaDoFilme);
+            const notaB = Number(b.dataset.notaDoFilme);
+
+            if (statusSelecionado === 'Maiores Avaliações') {
+                return notaB - notaA;
+            }
+
+            return notaA - notaB;
         });
 
-    });
+        cardFilmes.forEach((card) => {
+            catalogo.appendChild(card);
+        });
+    }
 
-function filtrar(generoSelect) {
-    const cardFilmes = document.querySelectorAll('.catalogo-filmes article');
+    // Filtrar os cards
+    for (const card of cardFilmes) {
+        const correspondeGenero =
+            generoSelecionado === 'Todos' ||
+            card.dataset.genero === generoSelecionado;
 
-    for (let card of cardFilmes) {
+        let correspondeStatus;
 
-        if (card.dataset.genero === generoSelect) {
+        if (statusSelecionado === 'Todos') {
+            correspondeStatus = true;
+        } else if (statusSelecionado === 'Em Breve') {
+            correspondeStatus = card.classList.contains('card-new-film');
+        } else if (
+            statusSelecionado === 'Maiores Avaliações' ||
+            statusSelecionado === 'Menores Avaliações'
+        ) {
+            correspondeStatus = !card.classList.contains('card-new-film');
+        } else {
+            correspondeStatus =
+                card.dataset.estadoDoFilme === statusSelecionado;
+        }
+
+        if (correspondeGenero && correspondeStatus) {
             card.classList.remove('desativar');
         } else {
             card.classList.add('desativar');
         }
-    };
-};
+    }
+}

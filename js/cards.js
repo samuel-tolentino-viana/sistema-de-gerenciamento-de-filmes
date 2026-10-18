@@ -18,7 +18,8 @@ function complet(dads) {
     const card = document.createElement('article');
     card.classList.add('fundo');
     card.dataset.genero = dads.genero;
-    card.dataset.conteudo = dads.conteudo;
+    card.dataset.estadoDoFilme = dads.estadoDoFilme;
+    card.dataset.notaDoFilme = dads.notaDoFilme;
     filmesLocal.appendChild(card);
     
     posterFilm(dads, card);
@@ -138,10 +139,10 @@ function destaques(dads, cardPai) {
 
 function assistiu(dads, estado) {
 
-    if (dads.estadoDoFilme === 'assistido') {
+    if (dads.estadoDoFilme === 'Assistido') {
         estado.classList.add('assistido');
         estado.innerHTML = '<i class="fa-solid fa-circle-check"></i> Assistido';
-    } else if (dads.estadoDoFilme === 'naoAssistido') {
+    } else if (dads.estadoDoFilme === 'Não Assistido') {
         estado.classList.add('nao-assistido');
         estado.innerHTML = '<i class="fa-solid fa-clock"></i> Não Assistido';
     } else {
