@@ -17,6 +17,8 @@ fetch('data/data.json')
 function complet(dads) {
     const card = document.createElement('article');
     card.classList.add('fundo');
+    card.dataset.genero = dads.genero;
+    card.dataset.conteudo = dads.conteudo;
     filmesLocal.appendChild(card);
     
     posterFilm(dads, card);

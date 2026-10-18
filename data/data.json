@@ -12,7 +12,7 @@
     },
     {
         "titulo": "Demon Slayer: Castelo Infinito",
-        "genero": "Fantasia Sombira",
+        "genero": "Fantasia sombria",
         "conteudo": "anime",
         "estadoDoFilme": "assistido",
         "modo": "lancado",
@@ -23,7 +23,7 @@
     },
     {
         "titulo": "Loki",
-        "genero": "Ficção Cientifica",
+        "genero": "Ficção científica",
         "conteudo": "serie",
         "estadoDoFilme": "naoAssistido",
         "modo": "lancado",
@@ -39,7 +39,7 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": false,
-        "notaDoFilme": 7.0,
+        "notaDoFilme": 7.1,
         "poster": "./images/filmes/barbie.jpg",
         "naTela": true
     },
@@ -61,7 +61,7 @@
         "estadoDoFilme": "assistido",
         "modo": "lancado",
         "imagemCompleta": true,
-        "notaDoFilme": 9.0,
+        "notaDoFilme": 9.1,
         "poster": "./images/animes/one-piece.webp",
         "naTela": true
     },
