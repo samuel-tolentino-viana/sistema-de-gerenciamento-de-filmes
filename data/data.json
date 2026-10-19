@@ -1,90 +1,82 @@
 [
     {
         "titulo": "Como Treinar o seu Dragão 3",
+        "modo": "lancado",
         "genero": "Fantasia",
         "conteudo": "filme",
         "estadoDoFilme": "Assistido",
-        "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.9,
-        "poster": "./images/filmes/como-treinar-seu-dragao-3.png",
-        "naTela": true
+        "poster": "./images/filmes/como-treinar-seu-dragao-3.png"
     },
     {
         "titulo": "Demon Slayer: Castelo Infinito",
+        "modo": "lancado",
         "genero": "Fantasia sombria",
         "conteudo": "anime",
         "estadoDoFilme": "Assistido",
-        "modo": "lancado",
         "imagemCompleta": true,
         "notaDoFilme": 8.3,
-        "poster": "./images/animes/castelo-infinito.jpg",
-        "naTela": true
+        "poster": "./images/animes/castelo-infinito.jpg"
     },
     {
         "titulo": "Loki",
+        "modo": "lancado",
         "genero": "Ficção científica",
         "conteudo": "serie",
         "estadoDoFilme": "Não Assistido",
-        "modo": "lancado",
         "imagemCompleta": true,
         "notaDoFilme": 8.2,
-        "poster": "./images/series/loki.jpg",
-        "naTela": true
+        "poster": "./images/series/loki.jpg"
     },
     {
         "titulo": "Barbie",
+        "modo": "lancado",
         "genero": "Comédia",
         "conteudo": "serie",
         "estadoDoFilme": "Assistido",
-        "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.1,
-        "poster": "./images/filmes/barbie.jpg",
-        "naTela": true
+        "poster": "./images/filmes/barbie.jpg"
     },
     {
         "titulo": "WALL-E",
+        "modo": "lancado",
         "genero": "Românce",
         "conteudo": "filme",
         "estadoDoFilme": "Assistido",
-        "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 8.4,
-        "poster": "./images/filmes/wall-e.webp",
-        "naTela": true
+        "poster": "./images/filmes/wall-e.webp"
     },
     {
         "titulo": "One Piece",
+        "modo": "lancado",
         "genero": "Shounen",
         "conteudo": "anime",
         "estadoDoFilme": "Assistido",
-        "modo": "lancado",
         "imagemCompleta": true,
         "notaDoFilme": 9.1,
-        "poster": "./images/animes/one-piece.webp",
-        "naTela": true
+        "poster": "./images/animes/one-piece.webp"
     },
     {
         "titulo": "Ragnarock",
+        "modo": "lancado",
         "genero": "Ação",
         "conteudo": "anime",
         "estadoDoFilme": "Não Assistido",
-        "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.6,
-        "poster": "./images/animes/record-of-ragnarock.webp",
-        "naTela": true
+        "poster": "./images/animes/record-of-ragnarock.webp"
     },
     {
         "titulo": "Round 6",
+        "modo": "lancado",
         "genero": "Drama",
         "conteudo": "serie",
         "estadoDoFilme": "Assistido",
-        "modo": "lancado",
         "imagemCompleta": false,
         "notaDoFilme": 7.9,
-        "poster": "./images/series/round-6.avif",
-        "naTela": true
+        "poster": "./images/series/round-6.avif"
     }
 ]

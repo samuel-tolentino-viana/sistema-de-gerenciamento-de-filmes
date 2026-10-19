@@ -56,6 +56,12 @@
     --cor-deletar: #ec4040;
     --cor-deletar-fundo: #fa222222;
 
+    /* detalhe */
+    --cor-clara: #ffffff;
+
+    /* Sol */
+    --fundo-sol: #323a49;
+
     /* Medidas */
     --medida-minima: 4px;
     --medida-pequena: 8px;
@@ -73,6 +79,9 @@
     /* Bordas */
     --borda: 1px solid #2d3950bb;
     --borda-forte: 1px solid #4a5a7805;
+
+    /* Sombra texto */
+    --shadow-text-new-film: 2px 2px 4px rgba(0, 0, 0, 0.498);
 }
 
 
@@ -81,10 +90,22 @@
 
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--fundo-principal);
     color: var(--letras);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body,
+body * {
+    transition:
+        background-color 0.5s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.3s ease;
 }
 
 .destaque {
@@ -104,8 +125,9 @@ h1 {
 
 .selecionado {
     background-color: var(--destaque);
-    padding: 4px;
+    padding: 8px;
     border-radius: var(--medida-pequena);
+    color: var(--cor-clara);
 }
 
 .depois {
@@ -158,7 +180,7 @@ h1 {
 }
 
 .item .numero {
-    color: white;
+    color: var(--letras);
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -218,6 +240,7 @@ header .cabecalho div {
 
 header .cabecalho .burguer {
     scale: 1.3;
+    color: var(--cor-clara);
 }
 
 header .cabecalho .movie {
@@ -226,16 +249,16 @@ header .cabecalho .movie {
     color: var(--letras-destaque);
 }
 
-header .cabecalho:nth-child(1) a {
+header .cabecalho a {
     text-decoration: none;
     color: white;
 }
 
 header .cabecalho .sun {
-    background-color: #1d273a;
+    background-color: var(--fundo-sol);
     padding: 9px 7px;
     border-radius: 50%;
-    transform: translateY(1px);
+    color: var(--cor-clara);
 }
 
 header .cabecalho .identificador {
@@ -248,6 +271,7 @@ header .cabecalho .identificador {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--cor-clara);
 }
 
 header .cabecalho .identificador p {
@@ -285,10 +309,6 @@ main .informacoes-form .apresentacao {
     margin: 0px 0px var(--medida-media);
 }
 
-main .area-de-pesquisa label {
-    margin-right: 9px;
-}
-
 main .apresentacao h1 {
     margin-bottom: var(--medida-minima);
 }
@@ -297,6 +317,10 @@ main .apresentacao p {
     color: var(--letras-secundaria);
 }
 
+main .area-de-pesquisa label {
+    margin-right: 9px;
+
+}
 main .informacoes-form .area-de-pesquisa {
     background-color: var(--contraste-fundo);
     border-radius: var(--medida-basica);
@@ -341,6 +365,7 @@ main .area-de-pesquisa input::placeholder {
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
+    color: var(--cor-clara);
 }
 
 .gerenciamento #adicionar span {
@@ -412,7 +437,6 @@ PARA DESKTOP
 
 .selecionar .controle {
     background-color: var(--contraste-fundo);
-    margin-left: 12px;
     display: flex;
     gap: var(--medida-pequena);
 }
@@ -427,9 +451,16 @@ PARA DESKTOP
     border-radius: var(--medida-pequena);
 }
 
+
+.selecionar .controle div:nth-child(1) {
+    padding-left: 9px;
+}
+.selecionar .controle div:nth-child(2) {
+    padding-right: 9px;
+}
+
 .selecionar .controle:nth-last-child(1) {
     display: flex;
-    padding-right: 8px;
     align-items: center;
     justify-content: center;
 }
@@ -459,6 +490,7 @@ PARA DESKTOP
 
 .catalogo-filmes .info-serie h3 {
     padding: 8px 0px 4px;
+    color: var(--letras);
 }
 
 .catalogo-filmes .genero {
@@ -515,7 +547,7 @@ PARA DESKTOP
 .catalogo-filmes .filme-acoes button {
     margin-right: 12px;
     background: none;
-    color: white;
+    color: var(--letras);
     border: none;
     background-color: var(--contraste-fundo-buttons);
     padding: 7px;
@@ -550,10 +582,11 @@ PARA DESKTOP
     height: 230px;
 }
 
-.card-new-film h3 {
+.card-new-film .info-serie h3 {
     text-align: center;
     font-size: 1.8rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.498);
+    text-shadow: var(--shadow-text-new-film);
+    color: var(--cor-clara);
 }
 
 .card-new-film button {
@@ -566,8 +599,8 @@ PARA DESKTOP
 }
 
 .card-new-film span {
-    color: var(--cor-nao-assistidos);
-    background-color: var(--cor-nao-assistidos-fundo);
+    color: #FF941F;
+    background-color: #3A2924;
     padding: var(--medida-pequena);
     box-shadow: 2px 2px 3px #2a1711;
     border-radius: var(--medida-pequena);
@@ -576,6 +609,7 @@ PARA DESKTOP
 .card-new-film:nth-child(1) button:nth-child(1),
 .card-new-film:nth-child(1) button:nth-child(2) {
     background-color: #4b9561bb;
+    color: var(--cor-clara);
 }
 
 .card-new-film:nth-child(1) button:nth-child(3) {
@@ -586,6 +620,7 @@ PARA DESKTOP
 .card-new-film:nth-child(2) button:nth-child(1),
 .card-new-film:nth-child(2) button:nth-child(2) {
     background-color: #586b8ed5;
+    color: var(--cor-clara);
 }
 
 .card-new-film:nth-child(2) button:nth-child(3) {
@@ -613,4 +648,50 @@ footer p {
 
 .desativar {
     display: none;
+}
+
+.tema-claro {
+    /* Fundo */
+    --fundo-principal: #C5CCDA;
+    --contraste-fundo: #D5DAE5;
+    --contraste-fundo-buttons: #40537735;
+
+    /* Letras */
+    --letras: #192233;
+    --letras-secundaria: #526587;
+    --letras-destaque: #4857D6;
+
+    /* Botões adicionar */
+    --botao-adicionar-filme1: #4D5BC4;
+    --botao-adicionar-filme2: #6572D4;
+
+    --destaque: #4857D6;
+
+    /* Títulos — Roxo */
+    --cor-titulos: #5148AD;
+    --cor-titulos-fundo: #B7B4D8;
+
+    /* Não assistidos — Laranja */
+    --cor-nao-assistidos: #984900;
+    --cor-nao-assistidos-fundo: #E5C9AB;
+
+    /* Nota média — Amarelo */
+    --cor-nota-media: #da9e06;
+    --cor-nota-media-fundo: #e1d099;
+
+    /* Assistidos — Verde */
+    --cor-assistidos: #075C3F;
+    --cor-assistidos-fundo: #A9D1BE;
+
+    /* Não assistido — Vermelho */
+    --cor-nao-assistido: #B42332;
+    --cor-nao-assistido-fundo: #E0B9BF;
+
+    /* Deletar — Vermelho */
+    --cor-deletar: #B42332;
+    --cor-deletar-fundo: #DEBFC3;
+
+    /* Bordas */
+    --borda: 1px solid #AAB4C7;
+    --borda-forte: 1px solid #8F9CB3;
 }
