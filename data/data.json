@@ -1,5 +1,53 @@
 [
     {
+        "titulo": "The Last of Us",
+        "modo": "lancado",
+        "genero": "Terror",
+        "conteudo": "serie",
+        "estadoDoFilme": "Não Assistido",
+        "imagemCompleta": true,
+        "notaDoFilme": 8.5,
+        "poster": "",
+        "modoHorizontal": false,
+        "posterHorizontal": ""
+    },
+    {
+        "titulo": "Tokyo Revengers",
+        "modo": "lancado",
+        "genero": "Ação",
+        "conteudo": "anime",
+        "estadoDoFilme": "Assistido",
+        "imagemCompleta": true,
+        "notaDoFilme": 7.9,
+        "poster": "",
+        "modoHorizontal": false,
+        "posterHorizontal": ""
+    },
+    {
+        "titulo": "13 Reasons Why",
+        "modo": "lancado",
+        "genero": "Drama",
+        "conteudo": "serie",
+        "estadoDoFilme": "Não Assistido",
+        "imagemCompleta": true,
+        "notaDoFilme": 7.4,
+        "poster": "",
+        "modoHorizontal": false,
+        "posterHorizontal": ""
+    },
+    {
+        "titulo": "It: Bem-Vindos a Derry",
+        "modo": "lancado",
+        "genero": "Terror",
+        "conteudo": "serie",
+        "estadoDoFilme": "Não Assistido",
+        "imagemCompleta": true,
+        "notaDoFilme": 8.6,
+        "poster": "images/series/it-bem-vindos-a-derry.png",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/series/it-bem-vindos-a-derry-horizontal.png"
+    },
+    {
         "titulo": "Como Treinar o seu Dragão 3",
         "modo": "lancado",
         "genero": "Fantasia",
@@ -7,7 +55,9 @@
         "estadoDoFilme": "Assistido",
         "imagemCompleta": false,
         "notaDoFilme": 7.9,
-        "poster": "./images/filmes/como-treinar-seu-dragao-3.png"
+        "poster": "./images/filmes/como-treinar-seu-dragao-3.png",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/filmes/como-treinar-seu-dragao-3-horizontal.png"
     },
     {
         "titulo": "Demon Slayer: Castelo Infinito",
@@ -17,7 +67,9 @@
         "estadoDoFilme": "Assistido",
         "imagemCompleta": true,
         "notaDoFilme": 8.3,
-        "poster": "./images/animes/castelo-infinito.jpg"
+        "poster": "./images/animes/castelo-infinito.jpg",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/animes/castelo-infinito-horizontal.png"
     },
     {
         "titulo": "Loki",
@@ -27,7 +79,9 @@
         "estadoDoFilme": "Não Assistido",
         "imagemCompleta": true,
         "notaDoFilme": 8.2,
-        "poster": "./images/series/loki.jpg"
+        "poster": "./images/series/loki.jpg",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/series/loki-horizontal.png"
     },
     {
         "titulo": "Barbie",
@@ -37,7 +91,9 @@
         "estadoDoFilme": "Assistido",
         "imagemCompleta": false,
         "notaDoFilme": 7.1,
-        "poster": "./images/filmes/barbie.jpg"
+        "poster": "./images/filmes/barbie.jpg",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/filmes/barbie-horizontal.png"
     },
     {
         "titulo": "WALL-E",
@@ -47,7 +103,9 @@
         "estadoDoFilme": "Assistido",
         "imagemCompleta": false,
         "notaDoFilme": 8.4,
-        "poster": "./images/filmes/wall-e.webp"
+        "poster": "./images/filmes/wall-e.webp",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/filmes/wall-e-horizontal.png"
     },
     {
         "titulo": "One Piece",
@@ -57,7 +115,9 @@
         "estadoDoFilme": "Assistido",
         "imagemCompleta": true,
         "notaDoFilme": 9.1,
-        "poster": "./images/animes/one-piece.webp"
+        "poster": "./images/animes/one-piece.webp",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/animes/one-piece-horizontal.png"
     },
     {
         "titulo": "Ragnarock",
@@ -67,7 +127,9 @@
         "estadoDoFilme": "Não Assistido",
         "imagemCompleta": false,
         "notaDoFilme": 7.6,
-        "poster": "./images/animes/record-of-ragnarock.webp"
+        "poster": "./images/animes/record-of-ragnarock.webp",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/animes/record-of-ragnarock-horizontal.png"
     },
     {
         "titulo": "Round 6",
@@ -77,6 +139,8 @@
         "estadoDoFilme": "Assistido",
         "imagemCompleta": false,
         "notaDoFilme": 7.9,
-        "poster": "./images/series/round-6.avif"
+        "poster": "./images/series/round-6.avif",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/series/round-6-horizontal.png"
     }
 ]

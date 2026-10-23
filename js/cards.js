@@ -20,8 +20,10 @@ function complet(dads) {
     card.dataset.genero = dads.genero;
     card.dataset.estadoDoFilme = dads.estadoDoFilme;
     card.dataset.notaDoFilme = dads.notaDoFilme;
+    card.dataset.posterVertical = dads.poster;
+    card.dataset.posterHorizontal = dads.posterHorizontal;
     filmesLocal.appendChild(card);
-    
+
     posterFilm(dads, card);
 
     if (dads.modo === 'lancado') {

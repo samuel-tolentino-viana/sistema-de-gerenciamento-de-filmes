@@ -69,29 +69,29 @@
 
             <div class="dominio-grid">
 
-                <div class="fundo item">
+                <div id="levar-aos-filmes" class="fundo item">
                     <div class="icon-classificacao">
                         <i class="fa-solid fa-video titulos"></i>
                         <div class="info-ativid">
                             <p>Títulos</p>
-                            <p class="numero">10</p>
+                            <p class="numero"></p>
                         </div>
                     </div>
                     <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
-                <div class="fundo item">
+                <div id="notas" class="fundo item">
                     <div class="icon-classificacao">
                         <i class="fa-solid fa-star nota-media"></i>
                         <div class="info-ativid">
                             <p>Nota Média</p>
-                            <p class="numero">6.43</p>
+                            <p class="numero">0.00</p>
                         </div>
                     </div>
                     <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
-                <div class="fundo item">
+                <div id="assistidos" class="fundo item">
                     <div class="icon-classificacao">
                         <i class="fa-solid fa-circle-check assistidos"></i>
                         <div class="info-ativid">
@@ -102,7 +102,7 @@
                     <i class="fa-solid fa-chevron-right seta-direita"></i>
                 </div>
 
-                <div class="fundo item">
+                <div id="nao-assistidos" class="fundo item">
                     <div class="icon-classificacao">
                         <i class="fa-solid fa-clock nao-assistidos"></i>
                         <div class="info-ativid">
@@ -126,6 +126,7 @@
                     <select name="filmes" id="genero-do-filme">
                         <option class="title-options" value="" disabled selected>Categoria</option>
                         <option value="todos">Todos</option>
+                        <option value="terror">Terror</option>
                         <option value="acao">Ação</option>
                         <option value="comedia">Comédia</option>
                         <option value="drama">Drama</option>
@@ -141,7 +142,7 @@
                         <option value="todos">Todos</option>
                         <option value="em breve">Em Breve</option>
                         <option value="assistido">Assistido</option>
-                        <option value="não assistido">Não Assistido</option>
+                        <option value="nao assistido">Não Assistido</option>
                         <option value="maiores avaliacoes">Maiores Avaliações</option>
                         <option value="menores avaliacoes">Menores Avaliações</option>
                     </select>
@@ -229,8 +230,9 @@
 
     <script src="js/cards.js"></script>
     <script src="js/filtro.js"></script>
-    <script src="js/tema.js"></script>
     <script src="js/direcao.js"></script>
+    <script src="js/acoes.js"></script>
+    <script src="js/tema.js"></script>
 </body>
 
 </html

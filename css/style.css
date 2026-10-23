@@ -98,13 +98,10 @@ body {
     background-color: var(--fundo-principal);
     color: var(--letras);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body,
-body * {
     transition:
-        background-color 0.5s ease,
-        color 0.4s ease,
-        border-color 0.4s ease,
+        background-color 0.4s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
         box-shadow 0.3s ease;
 }
 
@@ -121,6 +118,7 @@ h1 {
     padding: var(--espacamento-interno-base);
     border: var(--borda);
     border-radius: var(--radius-base);
+    max-width: 94vw;
 }
 
 .selecionado {
@@ -355,7 +353,6 @@ main .area-de-pesquisa input::placeholder {
 
 
 
-
 .gerenciamento #adicionar {
     border-radius: var(--medida-pequena);
     background-image: linear-gradient(to left, var(--botao-adicionar-filme1), var(--botao-adicionar-filme2));
@@ -387,6 +384,7 @@ main .area-de-pesquisa input::placeholder {
     align-items: center;
     justify-content: space-between;
     padding: 9px var(--medida-pequena);
+    cursor: pointer;
 }
 
 .atividade .item .icon-classificacao {
@@ -439,6 +437,7 @@ PARA DESKTOP
     background-color: var(--contraste-fundo);
     display: flex;
     gap: var(--medida-pequena);
+    cursor: pointer;
 }
 
 .selecionar .selecionado,
@@ -476,7 +475,11 @@ PARA DESKTOP
 .catalogo-filmes img {
     width: 100%;
     border-radius: var(--radius-base);
-    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    background-color: #9036d5;
+    /* background-color: #f61414e4; */
+    /* background-color: #8cccfb; */
 }
 
 .catalogo-filmes .completo {
@@ -571,7 +574,7 @@ PARA DESKTOP
 }
 
 .card-new-film img {
-    height: auto;
+    max-height: 300px;
 }
 
 .card-new-film .filme-poster {
@@ -646,10 +649,6 @@ footer p {
 
 
 
-.desativar {
-    display: none;
-}
-
 .tema-claro {
     /* Fundo */
     --fundo-principal: #C5CCDA;
@@ -694,4 +693,52 @@ footer p {
     /* Bordas */
     --borda: 1px solid #AAB4C7;
     --borda-forte: 1px solid #8F9CB3;
+}
+
+.horizontal {
+    width: 100%;
+    margin: var(--espacamento-externo-base-pert) 0px;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacamento-interno-base);
+    position: relative;
+}
+
+.horizontal img {
+    max-width: 180px;
+    max-height: 230px;
+    min-width: 180px;
+    min-height: 230px;
+    object-fit: cover;
+    overflow: hidden;
+    /* background-color: #943dd6; */
+    /* background-color: #f61414e4; */
+    background-color: #8cccfb;
+    color: black;
+}
+
+.horizontal .info-serie {
+    width: 100%;
+}
+
+.horizontal .info-serie div {
+    margin-top: var(--medida-grande);
+}
+
+.horizontal .filme-acoes {
+    position: absolute;
+    top: 75%;
+    left: 69%;
+}
+
+.sem-grid {
+    display: block;
+}
+
+.espacamento {
+    margin: var(--espacamento-externo-base-pert) 0px;
+}
+
+.desativar {
+    display: none;
 }
