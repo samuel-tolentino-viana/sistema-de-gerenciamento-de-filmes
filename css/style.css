@@ -136,6 +136,16 @@ h1 {
     border-radius: var(--medida-media);
 }
 
+a,
+button,
+.burguer,
+.trocar-tema,
+.identificador,
+.item,
+.controle {
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 
 /* ITENS ATIVIDADE */
@@ -181,6 +191,7 @@ h1 {
     color: var(--letras);
     font-size: 1.5rem;
     font-weight: 700;
+    animation: aparecer-numeros 0.6s ease-in-out;
 }
 
 
@@ -319,6 +330,7 @@ main .area-de-pesquisa label {
     margin-right: 9px;
 
 }
+
 main .informacoes-form .area-de-pesquisa {
     background-color: var(--contraste-fundo);
     border-radius: var(--medida-basica);
@@ -454,6 +466,7 @@ PARA DESKTOP
 .selecionar .controle div:nth-child(1) {
     padding-left: 9px;
 }
+
 .selecionar .controle div:nth-child(2) {
     padding-right: 9px;
 }
@@ -475,8 +488,8 @@ PARA DESKTOP
 .catalogo-filmes img {
     width: 100%;
     border-radius: var(--radius-base);
-    min-height: 120px;
-    max-height: 120px;
+    min-height: 135px;
+    max-height: 125px;
     background-color: #9036d5;
     /* background-color: #f61414e4; */
     /* background-color: #8cccfb; */
@@ -741,4 +754,22 @@ footer p {
 
 .desativar {
     display: none;
+}
+
+
+
+/* ANIMAÇÕES */
+
+
+
+@keyframes aparecer-numeros {
+    from {
+        transform: translateY(-2px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

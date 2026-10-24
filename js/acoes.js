@@ -56,9 +56,18 @@ function alterarInformacoes(dads) {
 
     numeroParaAlterar[0].innerHTML = cards.length;
 
-    /* const mediaNotas = dads.filter((dads) => {
-        return dads.notaDoFilme;
-    }); */
+    const mediaNotas = dads.filter((filme) => {
+        return filme.notaDoFilme !== undefined && filme.notaDoFilme !== ''; // FILTER PEGA O ARRAY QUE PASSA NA CONDIÇÃO
+    });
+
+    let soma = 0;
+
+    for (let todasNotas of mediaNotas) {
+        soma += Number(todasNotas.notaDoFilme);
+    };
+
+    soma = soma / mediaNotas.length;
+    numeroParaAlterar[1].innerHTML = soma.toFixed(2);
 
     const assistidos = [...cards].filter((cards) => {
         return cards.dataset.estadoDoFilme === 'Assistido';
