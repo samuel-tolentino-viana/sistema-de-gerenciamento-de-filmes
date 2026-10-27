@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/c01882b0ab.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bloquear-scroll">
     <header id="topo">
 
         <section class="cab-fixed">
@@ -22,7 +22,7 @@
                 <div>
                     <div class="trocar-tema sun"><i class="fa-solid fa-sun"></i></div>
                     <div class="identificador">
-                        <p>E</p>
+                        <p></p>
                     </div>
                 </div> <!-- CIRCULO PARA PERFIL -->
             </div>
@@ -30,13 +30,14 @@
         </section>
 
     </header>
+
     <main>
 
         <section class="informacoes-form">
 
             <div class="apresentacao">
 
-                <h1>Olá, <span class="destaque">Example!</span></h1>
+                <h1>Olá, <span class="destaque"></span></h1>
                 <p>Sua coleção de filmes, séries e animes, em um só lugar.</p>
 
             </div>
@@ -223,10 +224,40 @@
 
     </main>
 
-    <footer>
-        <p>ainda tem coisa pra por aqui &#x1F603;</p>
-    </footer>
+    <div class="overlay"></div>
 
+    <div class="fixed">
+        <div class="conteudo">
+            <h2>Mais sobre você</h2>
+            <p>Nos forneça algumas informações sobre você para uma melhor experiência.</p>
+            <div class="formulario">
+                <label for="nome">Seu nome:</label>
+                <input type="text" name="nome" id="nome" autocomplete="off"> 
+            </div>
+            <div class="escolha-generos">
+                <h3>Qual seu gênero de filme favorito?</h3>
+                <button type="button">Todos</button>
+                <button type="button">Terror</button>
+                <button type="button">Ação</button>
+                <button type="button">Comédia</button>
+                <button type="button">Drama</button>
+                <button type="button">Fantasia</button>
+                <button type="button">Ficção científica</button>
+                <button type="button">Românce</button>
+                <button type="button">Shounen</button>
+                <button type="button">Fantasia sombria</button>
+            </div>
+            <div class="escolha-notas">
+                <h3>Notas:</h3>
+                <button type="button">Todos</button>
+                <button type="button">Maiores Avaliações</button>
+                <button type="button">Menores Avaliações</button>
+            </div>
+            <button id="enviar" type="button">Enviar</button>
+        </div>
+    </div>
+
+    <script src="js/info.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/filtro.js"></script>
     <script src="js/direcao.js"></script>
@@ -234,4 +265,4 @@
     <script src="js/tema.js"></script>
 </body>
 
-</html
+</html>
