@@ -29,7 +29,7 @@ enviar.addEventListener('click', () => {
 
 });
 
-botoesGenero[0].classList.add('selecionado');
+botoesGenero[0].classList.add('bnt-selecionado');
 
 for (let botaoGeneroClicado of botoesGenero) {
     botaoGeneroClicado.addEventListener('click', () => {
@@ -37,7 +37,7 @@ for (let botaoGeneroClicado of botoesGenero) {
     });
 };
 
-botoesNota[0].classList.add('selecionado');
+botoesNota[0].classList.add('bnt-selecionado');
 
 for (let botaoNotaClicado of botoesNota) {
     botaoNotaClicado.addEventListener('click', () => {
@@ -47,13 +47,13 @@ for (let botaoNotaClicado of botoesNota) {
 
 function alterarSelecao(botoes, botoesClicado) {
     for (let removeClass of botoes) {
-        removeClass.classList.remove('selecionado');
+        removeClass.classList.remove('bnt-selecionado');
     }
-    botoesClicado.classList.add('selecionado');
+    botoesClicado.classList.add('bnt-selecionado');
 }
 
 function selecionar() {
-    const generoSelecionado = document.querySelector('.escolha-generos button.selecionado');
+    const generoSelecionado = document.querySelector('.escolha-generos button.bnt-selecionado');
     let generoColocado = document.querySelector('#genero-do-filme');
 
     for (let todosOsGeneros of generos) {
@@ -66,7 +66,7 @@ function selecionar() {
 };
 
 function mudarNotas() {
-    const statusSelecionado = document.querySelector('.escolha-notas button.selecionado');
+    const statusSelecionado = document.querySelector('.escolha-notas button.bnt-selecionado');
     let notaColocada = document.querySelector('#status');
 
     for(let todosAsNotas of opcoesSatatus) {
