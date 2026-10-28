@@ -77,6 +77,17 @@
         "posterHorizontal": "./images/animes/horizontal/castelo-infinito-horizontal.png"
     },
     {
+        "titulo": "Dragon Ball: Super Broly",
+        "modo": "lancado",
+        "genero": "Ação",
+        "conteudo": "anime",
+        "estadoDoFilme": "Assistido",
+        "notaDoFilme": 7.7,
+        "poster": "./images/animes/vertical/dragon-ball-super-broly.png",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/animes/horizontal/dragon-ball-super-broly-horizontal.png"   
+    },
+    {
         "titulo": "Loki",
         "modo": "lancado",
         "genero": "Ficção científica",

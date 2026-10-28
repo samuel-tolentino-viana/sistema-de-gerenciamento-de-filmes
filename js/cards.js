@@ -23,16 +23,22 @@ function complet(dads) {
     card.dataset.posterVertical = dads.poster;
     card.dataset.posterHorizontal = dads.posterHorizontal;
     filmesLocal.appendChild(card);
+    
+    const caixa = document.createElement('div');
+    caixa.classList.add('caixa-conteudo');
 
     posterFilm(dads, card);
 
     if (dads.modo === 'lancado') {
-        informacoesDaSerie(dads, card);
-        botoes(card);
+        informacoesDaSerie(dads, caixa);
+        botoes(caixa);
     } else {
         card.classList.add('card-new-film');
         destaques(dads, card);
     }
+
+    card.appendChild(caixa);
+
 };
 
 function posterFilm(dads, cardPai) {

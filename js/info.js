@@ -7,7 +7,7 @@ const corp = document.body;
 const botoesGenero = document.querySelectorAll('.fixed .escolha-generos button');
 const botoesNota = document.querySelectorAll('.fixed .escolha-notas button');
 const generos = document.querySelectorAll('#genero-do-filme option');
-const notas = document.querySelectorAll('#status option');
+const opcoesSatatus = document.querySelectorAll('#status option');
 
 enviar.addEventListener('click', () => {
     const nomeDigitado = document.getElementById('nome');
@@ -69,7 +69,7 @@ function mudarNotas() {
     const statusSelecionado = document.querySelector('.escolha-notas button.selecionado');
     let notaColocada = document.querySelector('#status');
 
-    for(let todosAsNotas of notas) {
+    for(let todosAsNotas of opcoesSatatus) {
         if(todosAsNotas.textContent === statusSelecionado.textContent) {
             notaColocada.value = todosAsNotas.value;
         }

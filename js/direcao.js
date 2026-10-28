@@ -30,8 +30,6 @@ function alterarHorientacao(dads) {
         areaFilmes.classList.add('sem-grid');
         for (let i = 2; i < cards.length; i++) {
             cards[i].classList.add('horizontal');
-            cards[0].classList.add('espacamento');
-            cards[1].classList.add('espacamento');
         };
 
         for (let dadosDoJson of dads) {

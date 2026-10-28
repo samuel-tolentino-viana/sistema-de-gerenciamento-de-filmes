@@ -70,13 +70,13 @@ function alterarInformacoes(dads) {
     numeroParaAlterar[1].innerHTML = soma.toFixed(2);
 
     const assistidos = [...cards].filter((cards) => {
-        return cards.dataset.estadoDoFilme === 'assistido';
+        return cards.dataset.estadoDoFilme === 'Assistido';
     }).length;
 
     numeroParaAlterar[2].innerHTML = assistidos;
 
     const naoAssistidos = [...cards].filter((cards) => {
-        return cards.dataset.estadoDoFilme === 'Não assistido';
+        return cards.dataset.estadoDoFilme === 'Não Assistido';
     }).length;
 
     numeroParaAlterar[3].innerHTML = naoAssistidos;
