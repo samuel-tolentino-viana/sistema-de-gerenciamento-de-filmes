@@ -1,9 +1,10 @@
-const enviar = document.getElementById('enviar');
+const nomeGuardado = localStorage.getItem('nome');
 const identificador = document.querySelector('.identificador p');
 const nomeDestaque = document.querySelector('.apresentacao h1 .destaque');
 const overlay = document.querySelector('.overlay');
 const box = document.querySelector('.fixed');
 const corp = document.body;
+const enviar = document.getElementById('enviar');
 const botoesGenero = document.querySelectorAll('.fixed .escolha-generos button');
 const botoesNota = document.querySelectorAll('.fixed .escolha-notas button');
 const generos = document.querySelectorAll('#genero-do-filme option');
@@ -19,9 +20,8 @@ enviar.addEventListener('click', () => {
         mudarNotas();
         nomeDestaque.innerText = `${nomeUsual.charAt(0).toUpperCase() + nomeUsual.slice(1)}!`;
         identificador.innerText = nomeUsual.charAt(0).toUpperCase();
-        box.classList.add('desativar');
-        overlay.classList.add('desativar');
-        corp.classList.remove('bloquear-scroll');
+        limparBox();
+        localStorage.setItem('nome', nomeUsual.charAt(0).toUpperCase() + nomeUsual.slice(1));
     } else {
         nomeDigitado.placeholder = 'DIGITE SEU NOME!!';
     }
@@ -69,11 +69,51 @@ function mudarNotas() {
     const statusSelecionado = document.querySelector('.escolha-notas button.bnt-selecionado');
     let notaColocada = document.querySelector('#status');
 
-    for(let todosAsNotas of opcoesSatatus) {
-        if(todosAsNotas.textContent === statusSelecionado.textContent) {
+    for (let todosAsNotas of opcoesSatatus) {
+        if (todosAsNotas.textContent === statusSelecionado.textContent) {
             notaColocada.value = todosAsNotas.value;
         }
-        
+
         notaColocada.dispatchEvent(new Event('change'));
     };
 };
+
+function limparBox() {
+    box.classList.add('desativar');
+    overlay.classList.add('desativar');
+    corp.classList.remove('bloquear-scroll');
+};
+
+
+if (nomeGuardado.length != 0) {
+    limparBox();
+    nomeDestaque.innerText = `${nomeGuardado}!`;
+    identificador.innerText = nomeGuardado.charAt(0).toUpperCase();
+}
+
+const botao = document.querySelector('.bg-click');
+const sairBarra = document.querySelector('.sair');
+
+botao.addEventListener('click', () => {
+    const barraLateral = document.querySelector('.seletores');
+
+    if (barraLateral.classList.contains('desativar')) {
+        barraLateral.classList.remove('desativar');
+        corp.classList.add('bloquear-scroll');
+        overlay.classList.remove('desativar');
+    }
+});
+
+sairBarra.addEventListener('click', () => {
+    const barraLateral = document.querySelector('.seletores');
+
+    if (!barraLateral.classList.contains('desativar')) {
+        barraLateral.classList.add('reverter-barra');
+        corp.classList.remove('bloquear-scroll');
+        overlay.classList.add('desativar');
+        setTimeout(() => {
+            barraLateral.classList.add('desativar');
+            barraLateral.classList.remove('reverter-barra');
+        }, 1000);
+    }
+});

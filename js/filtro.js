@@ -20,7 +20,6 @@ statusFilme.addEventListener('change', (event) => {
 function filtrar() {
     const catalogo = document.querySelector('.catalogo-filmes');
     const cardFilmes = [...catalogo.querySelectorAll('article')];
-    console.log(cardFilmes);
 
     cardFilmes.forEach((card, index) => {
         if (card.dataset.ordemOriginal === undefined) {

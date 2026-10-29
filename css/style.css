@@ -141,8 +141,15 @@ button,
 .trocar-tema,
 .identificador,
 .item,
-.controle {
+.controle,
+.sair {
     -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.bord {
+    border-bottom: 1px solid #ffffff20;
+    margin: 14px 0;
 }
 
 
@@ -168,7 +175,7 @@ button,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
+    z-index: 9998;
 }
 
 .conteudo h2 {
@@ -404,7 +411,7 @@ header .cab-fixed {
     top: 0;
     left: 0;
     width: calc(100% - 32px);
-    z-index: 2;
+    z-index: 9998;
     height: 52px;
 }
 
@@ -689,7 +696,7 @@ PARA DESKTOP
     justify-content: space-between;
     align-items: center;
     margin: 3px 0px;
-    font-size: clamp(1.4vw, 14px, 3vw);
+    font-size: 12.5px;
 }
 
 .catalogo-filmes .nota {
@@ -881,16 +888,157 @@ footer p {
     --borda-forte: 1px solid #8F9CB3;
 }
 
+.seletores {
+    background: linear-gradient(140deg,
+            #111927 0%,
+            #202B48 50%,
+            #4F46A5 100%);
+
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px 70px;
+    box-sizing: border-box;
+    color: #F3F4F9;
+    transform: translateX(-300px);
+    opacity: 0.4;
+
+    animation: aparecerBarraLateral 0.8s ease forwards;
+}
+
+/* Cabeçalho */
+.sidebar-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px 16px;
+}
+
+.sidebar-topo div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-topo .video {
+    background-color: #6f7dfc;
+    padding: 10px 8px;
+    border-radius: 6px;
+}
+
+.sidebar-topo h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+/* Navegação */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.sidebar-titulo {
+    color: #A5B0C9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin: 0 8px 10px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 12px;
+    border-radius: 9px;
+
+    color: #D7DDEC;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-link:hover {
+    background: #ffffff12;
+    color: #FFFFFF;
+}
+
+.sidebar-link.ativo {
+    background: #6776F7;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Perfil no rodapé */
+.sidebar-perfil {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: auto;
+    padding: 14px 10px;
+    border-top: 1px solid #ffffff20;
+}
+
+.perfil-avatar {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #6776F7;
+    font-weight: 700;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.perfil-info strong {
+    font-size: 13px;
+}
+
+.perfil-info span {
+    font-size: 11px;
+    color: #C0C8DE;
+}
+
+.sidebar-perfil>i {
+    color: #C0C8DE;
+}
+
+.desativar {
+    display: none;
+}
+
 .horizontal {
-    width: 100%;
     display: flex;
     align-items: flex-start;
     gap: var(--espacamento-interno-base);
 }
 
 .horizontal img {
-    width: 170px;
-    aspect-ratio: 1.3/1.8;
+    width: 160px;
+    aspect-ratio: 1.1/1.6;
     object-fit: cover;
     overflow: hidden;
     /* background-color: #943dd6; */
@@ -901,14 +1049,27 @@ footer p {
 
 .horizontal .caixa-conteudo {
     width: 100%;
-    height: 220px;
+    height: 210px;
     display: flex;
+    gap: 12px;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .horizontal .info-serie {
     width: 100%;
+}
+
+.horizontal .info-serie h3 {
+    padding: 0px;
+}
+
+.catalogo-filmes .horizontal .info-serie div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--medida-basica) 0 0;
+    font-size: 14px;
 }
 
 .horizontal .info-serie div {
@@ -921,16 +1082,16 @@ footer p {
     display: flex;
 }
 
-.sem-grid {
-    grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
+.controle-grid {
+    grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
 }
 
 .espacamento {
     margin: var(--espacamento-externo-base-pert) 0px;
 }
 
-.desativar {
-    display: none;
+.reverter-barra {
+    animation: sairBarraLateral 0.8s ease-in forwards;
 }
 
 
@@ -948,5 +1109,24 @@ footer p {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes aparecerBarraLateral {
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes sairBarraLateral {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+    to {
+        transform: translateX(-300px);
+        opacity: 0.4;
     }
 }

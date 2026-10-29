@@ -27,7 +27,7 @@ function alterarHorientacao(dads) {
     const cards = document.querySelectorAll('.catalogo-filmes article');
 
     if (botoesSelecao[1].classList.contains('selecionado')) {
-        areaFilmes.classList.add('sem-grid');
+        areaFilmes.classList.add('controle-grid');
         for (let i = 2; i < cards.length; i++) {
             cards[i].classList.add('horizontal');
         };
@@ -36,7 +36,7 @@ function alterarHorientacao(dads) {
             dadosDoJson.modoHorizontal = true;
         }
     } else {
-        areaFilmes.classList.remove('sem-grid');
+        areaFilmes.classList.remove('controle-grid');
         for (let i = 2; i < cards.length; i++) {
             cards[i].classList.remove('horizontal');
             cards[0].classList.remove('espacamento');

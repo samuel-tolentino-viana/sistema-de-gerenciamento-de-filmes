@@ -16,7 +16,7 @@
 
             <div class="cabecalho">
                 <div>
-                    <i class="fa-solid fa-bars burguer"></i>
+                    <div class="bg-click"><i class="fa-solid fa-bars burguer"></i></div>
                     <a href="#topo"><i class="fa-solid fa-film movie"></i> Filmes, séries & Animes</a>
                 </div>
                 <div>
@@ -224,6 +224,65 @@
 
     </main>
 
+    <aside class="seletores desativar">
+        <div class="sidebar-topo">
+            <div>
+                <i class="fa-solid fa-video video"></i>
+                <h2>CineTrack</h2>
+            </div>
+            <div class="sair"><i class="fa-solid fa-x"></i></div>
+        </div>
+
+        <div class="bord"></div>
+
+        <nav class="sidebar-menu">
+            <p class="sidebar-titulo">MENU PRINCIPAL</p>
+
+            <a href="#topo" class="sidebar-link ativo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Visão geral</span>
+            </a>
+
+            <a href="#catalogo" class="sidebar-link">
+                <i class="fa-solid fa-video"></i>
+                <span>Meu catálogo</span>
+            </a>
+
+            <a href="#catalogo" class="sidebar-link">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Assistidos</span>
+            </a>
+
+            <a href="#catalogo" class="sidebar-link">
+                <i class="fa-solid fa-clock"></i>
+                <span>Não assistidos</span>
+            </a>
+
+            <a href="#catalogo" class="sidebar-link">
+                <i class="fa-solid fa-star"></i>
+                <span>Melhores avaliações</span>
+            </a>
+
+            <div class="bord"></div>
+
+            <p class="sidebar-titulo">PREFERÊNCIAS</p>
+
+            <a href="#catalogo" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-perfil">
+            <div class="perfil-avatar">S</div>
+            <div class="perfil-info">
+                <strong>Seu perfil</strong>
+                <span>Preferências pessoais</span>
+            </div>
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+        </div>
+    </aside>
+
     <div class="overlay"></div>
 
     <div class="fixed">
@@ -232,7 +291,7 @@
             <p>Nos forneça algumas informações sobre você para uma melhor experiência.</p>
             <div class="formulario">
                 <label for="nome">Seu nome:</label>
-                <input type="text" name="nome" id="nome" autocomplete="off"> 
+                <input type="text" name="nome" id="nome" autocomplete="off">
             </div>
             <div class="escolha-generos">
                 <h3>Qual seu gênero de filme favorito?</h3>
@@ -257,7 +316,7 @@
         </div>
     </div>
 
-    <script src="js/info.js"></script>
+    <script src="js/complements.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/filtro.js"></script>
     <script src="js/direcao.js"></script>
