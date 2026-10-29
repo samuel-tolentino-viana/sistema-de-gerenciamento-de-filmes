@@ -55,6 +55,17 @@
         "posterHorizontal": "./images/series/horizontal/it-bem-vindos-a-derry-horizontal.png"
     },
     {
+        "titulo": "Horimya",
+        "modo": "lancado",
+        "genero": "Românce",
+        "conteudo": "anime",
+        "estadoDoFilme": "Assistido",
+        "notaDoFilme": 8.2,
+        "poster": "./images/animes/vertical/",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/animes/horizontal/"
+    },
+    {
         "titulo": "Como Treinar o seu Dragão 3",
         "modo": "lancado",
         "genero": "Fantasia",
@@ -86,6 +97,17 @@
         "poster": "./images/animes/vertical/dragon-ball-super-broly.png",
         "modoHorizontal": false,
         "posterHorizontal": "./images/animes/horizontal/dragon-ball-super-broly-horizontal.png"   
+    },
+    {
+        "titulo": "Doutor Estranho no Multiverso da Loucura",
+        "modo": "lancado",
+        "genero": "Ficção científica",
+        "conteudo": "filme",
+        "estadoDoFilme":"Não Assistido",
+        "notaDoFilme": 6.8,
+        "poster": "./images/series/vertical/",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/series/horizontal/"
     },
     {
         "titulo": "Loki",

@@ -18,7 +18,7 @@ enviar.addEventListener('click', () => {
     if (nomeUsual.length >= 3) {
         selecionar();
         mudarNotas();
-        nomeDestaque.innerText = `${nomeUsual.charAt(0).toUpperCase() + nomeUsual.slice(1)}!`;
+        nomeDestaque.innerText = `${nomeUsual.charAt(0).toUpperCase() + nomeUsual.slice(1)}`;
         identificador.innerText = nomeUsual.charAt(0).toUpperCase();
         limparBox();
         localStorage.setItem('nome', nomeUsual.charAt(0).toUpperCase() + nomeUsual.slice(1));
@@ -84,20 +84,18 @@ function limparBox() {
     corp.classList.remove('bloquear-scroll');
 };
 
-
-if (nomeGuardado.length != 0) {
-    limparBox();
-    nomeDestaque.innerText = `${nomeGuardado}!`;
-    identificador.innerText = nomeGuardado.charAt(0).toUpperCase();
-}
-
 const botao = document.querySelector('.bg-click');
 const sairBarra = document.querySelector('.sair');
 
 botao.addEventListener('click', () => {
     const barraLateral = document.querySelector('.seletores');
+    const nomeColocarNaBarra = document.querySelector('.apresentacao .destaque').textContent;
+    const areaNomeBarraLateral = document.querySelector('.sidebar-perfil strong');
+    const identificadorDaBarraLateral = document.querySelector('.sidebar-perfil .perfil-avatar');
 
     if (barraLateral.classList.contains('desativar')) {
+        identificadorDaBarraLateral.innerText = nomeColocarNaBarra.charAt(0).toUpperCase();
+        areaNomeBarraLateral.innerText = nomeColocarNaBarra;
         barraLateral.classList.remove('desativar');
         corp.classList.add('bloquear-scroll');
         overlay.classList.remove('desativar');
@@ -117,3 +115,9 @@ sairBarra.addEventListener('click', () => {
         }, 1000);
     }
 });
+
+if (nomeGuardado) {
+    limparBox();
+    nomeDestaque.innerText = `${nomeGuardado}`;
+    identificador.innerText = nomeGuardado.charAt(0).toUpperCase();
+}
