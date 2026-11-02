@@ -39,8 +39,6 @@ function alterarHorientacao(dads) {
         areaFilmes.classList.remove('controle-grid');
         for (let i = 2; i < cards.length; i++) {
             cards[i].classList.remove('horizontal');
-            cards[0].classList.remove('espacamento');
-            cards[1].classList.remove('espacamento');
         };
 
         for (let dadosDoJson of dads) {

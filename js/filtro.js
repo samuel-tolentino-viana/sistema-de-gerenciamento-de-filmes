@@ -5,9 +5,7 @@ let generoSelecionado = 'Todos';
 let statusSelecionado = 'Todos';
 
 generoFilme.addEventListener('change', (event) => {
-    generoSelecionado = event.target.value === 'todos'
-        ? 'Todos'
-        : event.target.options[event.target.selectedIndex].text;
+    generoSelecionado = event.target.value === 'todos' ? 'Todos' : event.target.options[event.target.selectedIndex].text;
 
     filtrar();
 });
@@ -35,9 +33,7 @@ function filtrar() {
         const cardsComNota = cardFilmes.filter((card) => {
             const nota = card.dataset.notaDoFilme;
 
-            return nota !== undefined &&
-                nota.trim() !== '' &&
-                Number.isFinite(Number(nota));
+            return nota !== undefined && nota.trim() !== '' && Number.isFinite(Number(nota));
         });
 
         cardsComNota.sort((a, b) => {
@@ -45,10 +41,10 @@ function filtrar() {
             const notaB = Number(b.dataset.notaDoFilme);
 
             if (statusSelecionado === 'Maiores Avaliações') {
-                return notaB - notaA;
+                return notaB - notaA; // SE SUBTRAI O SEGUNDO PELO PRIMEIRO A ORDEM FICA CRESCENTE, DO MAIOR PARA O MENOR (PQ???)
             }
 
-            return notaA - notaB;
+            return notaA - notaB; // MESMA COISA, SÓ QUE DO MENOR PARA O MAIOR
         });
 
         // Colocar primeiro os cards com nota, em ordem de avaliação
@@ -57,9 +53,7 @@ function filtrar() {
         });
 
         // Os cards sem nota ficam depois, na ordem original
-        const cardsSemNota = cardFilmes
-            .filter((card) => !cardsComNota.includes(card))
-            .sort((a, b) => {
+        const cardsSemNota = cardFilmes.filter((card) => !cardsComNota.includes(card)).sort((a, b) => {
                 return Number(a.dataset.ordemOriginal) -
                     Number(b.dataset.ordemOriginal);
             });
@@ -81,9 +75,7 @@ function filtrar() {
 
     // Filtrar os cards por gênero e status
     for (const card of cardFilmes) {
-        const correspondeGenero =
-            generoSelecionado === 'Todos' ||
-            card.dataset.genero === generoSelecionado;
+        const correspondeGenero = generoSelecionado === 'Todos' || card.dataset.genero === generoSelecionado;
 
         let correspondeStatus;
 
@@ -91,18 +83,12 @@ function filtrar() {
             correspondeStatus = true;
         } else if (statusSelecionado === 'Em Breve') {
             correspondeStatus = card.classList.contains('card-new-film');
-        } else if (
-            statusSelecionado === 'Maiores Avaliações' ||
-            statusSelecionado === 'Menores Avaliações'
-        ) {
+        } else if (statusSelecionado === 'Maiores Avaliações' || statusSelecionado === 'Menores Avaliações') {
             const nota = card.dataset.notaDoFilme;
 
-            correspondeStatus = nota !== undefined &&
-                nota.trim() !== '' &&
-                Number.isFinite(Number(nota));
+            correspondeStatus = nota !== undefined && nota.trim() !== '' && Number.isFinite(Number(nota));
         } else {
-            correspondeStatus =
-                card.dataset.estadoDoFilme === statusSelecionado;
+            correspondeStatus = card.dataset.estadoDoFilme === statusSelecionado;
         }
 
         if (correspondeGenero && correspondeStatus) {

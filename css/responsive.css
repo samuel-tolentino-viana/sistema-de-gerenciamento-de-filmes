@@ -1,0 +1,739 @@
+/* ==========================================================================
+   RESPONSIVE.CSS — layout para TELAS GRANDES (computador / notebook)
+   --------------------------------------------------------------------------
+   Este arquivo vem DEPOIS do style.css no HTML. Por isso, quando um seletor
+   tem a mesma "força" (especificidade) nos dois arquivos, vale o daqui.
+
+   Breakpoints usados:
+     1024px -> começa o layout de computador (sidebar fixa + 3 colunas)
+     1280px -> sobra espaço: campos maiores e subtítulo no botão "Adicionar"
+     1360px -> grade de filmes com 4 colunas (igual ao mockup)
+     1720px -> 5 colunas
+     2100px -> 6 colunas
+
+   Abaixo de 1024px nada aqui é aplicado: continua valendo o style.css.
+   ========================================================================== */
+
+
+@media (min-width: 1024px) {
+
+    /* ---------- VARIÁVEIS DO LAYOUT DE COMPUTADOR ---------- */
+
+    :root {
+        --largura-sidebar: 260px;
+        --espaco-pagina: 32px;
+        /* margem lateral do conteúdo */
+        --gap-grid: 20px;
+        /* espaço entre os cards */
+    }
+
+
+
+    /* ---------- SIDEBAR: fixa e sempre visível ---------- */
+
+    /* No celular a sidebar começa escondida (.desativar), fora da tela e com
+       animação. Aqui desfazemos tudo isso para ela ficar sempre aberta. */
+    .seletores,
+    .seletores.desativar,
+    .seletores.reverter-barra {
+        display: flex;
+        width: var(--largura-sidebar);
+        height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
+        padding: 24px 16px 20px;
+        transform: none;
+        opacity: 1;
+        animation: none;
+        /* Menor que o overlay (9998): assim o desfoque do pop-up
+           "Mais sobre você" cobre a sidebar também. */
+        z-index: 100;
+        background: linear-gradient(180deg, #172036 0%, #111927 100%);
+        border-right: var(--borda);
+    }
+
+    /* O X de fechar não faz sentido com a sidebar sempre aberta */
+    .sidebar-topo .sair {
+        display: none;
+    }
+
+    .sidebar-topo {
+        padding: 4px 8px 8px;
+    }
+
+    .sidebar-menu {
+        margin-top: 20px;
+        gap: 6px;
+    }
+
+    .sidebar-link {
+        font-size: 15px;
+    }
+
+    .sidebar-link:focus-visible {
+        outline: 2px solid var(--destaque);
+        outline-offset: 2px;
+    }
+
+
+
+    /* ---------- CABEÇALHO ---------- */
+
+    /* Antes: barra fixa no topo com menu hambúrguer e logo.
+       Agora: a logo já está na sidebar, então sobram só o botão de tema e
+       o avatar, no canto superior direito. Usamos position: absolute (e não
+       fixed) para eles rolarem junto com a página. */
+    header .cab-fixed {
+        position: absolute;
+        top: 30px;
+        left: auto;
+        right: var(--espaco-pagina);
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+        backdrop-filter: none;
+        z-index: 10;
+    }
+
+    /* Esconde o primeiro grupo (hambúrguer + logo) */
+    header .cabecalho>div:first-child {
+        display: none;
+    }
+
+    header .cabecalho div {
+        gap: 14px;
+    }
+
+    /* Botão de tema e avatar: dois círculos do mesmo tamanho */
+    header .cabecalho .sun,
+    header .cabecalho .identificador {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        justify-content: center;
+    }
+
+
+
+    /* ---------- <main> COMO GRID COM "ÁREAS" NOMEADAS ---------- */
+
+    /* Cada <section> ganha um lugar fixo, mesmo que no HTML a ordem seja outra.
+       No HTML: saudação -> adicionar -> estatísticas -> filtros -> catálogo.
+       No mockup: botão e filtros ficam juntos, na mesma linha, ANTES das
+       estatísticas. O grid resolve isso só com CSS, sem mexer no HTML.
+
+       Colunas: a 1ª ocupa o espaço que sobrar (1fr) e a 2ª tem só a largura
+       que os filtros precisam (auto). */
+    main {
+        margin-left: var(--largura-sidebar);
+        padding: 30px var(--espaco-pagina) 48px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "saudacao      saudacao"
+            "adicionar     filtros"
+            "estatisticas  estatisticas"
+            "catalogo      catalogo";
+        row-gap: 24px;
+    }
+
+    /* O espaço entre as seções agora vem do row-gap, então zeramos as margens */
+    main section {
+        margin: 0;
+    }
+
+    main .informacoes-form {
+        grid-area: saudacao;
+        margin: 0;
+    }
+
+    .gerenciamento {
+        grid-area: adicionar;
+    }
+
+    .selecionar {
+        grid-area: filtros;
+        margin: 0;
+    }
+
+    .atividade {
+        grid-area: estatisticas;
+    }
+
+    .catalogo-filmes {
+        grid-area: catalogo;
+    }
+
+
+
+    /* ---------- SAUDAÇÃO + BUSCA (linha do topo) ---------- */
+
+    /* Flexbox: saudação à esquerda, busca à direita.
+       O padding-right reserva o espaço do botão de tema + avatar, que estão
+       "soltos" (position: absolute) no canto da página. */
+    main .informacoes-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding-right: 118px;
+    }
+
+    main .informacoes-form .apresentacao {
+        margin: 0;
+        min-width: 0;
+    }
+
+    main .apresentacao h1 {
+        font-size: 1.9rem;
+        line-height: 1.15;
+    }
+
+    /* Busca em formato de "pílula" */
+    main .informacoes-form .area-de-pesquisa {
+        display: flex;
+        align-items: center;
+        flex: 0 1 300px;
+        min-width: 200px;
+        height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+    }
+
+    main .informacoes-form .area-de-pesquisa:focus-within {
+        border-color: var(--destaque);
+    }
+
+    main .area-de-pesquisa label:not(.sr-only) {
+        display: flex;
+        margin-right: 12px;
+        color: var(--letras-secundaria);
+    }
+
+    main .area-de-pesquisa input {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        height: 100%;
+        font-size: 0.95rem;
+    }
+
+
+
+    /* ---------- BARRA DE AÇÕES (adicionar + filtros) ---------- */
+
+    /* São duas <section> separadas no HTML, uma ao lado da outra no grid.
+       Cada uma recebe METADE do cartão (cantos arredondados só de um lado e
+       sem a borda do meio). Juntas parecem uma barra única, como no mockup. */
+    .gerenciamento,
+    .selecionar {
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        background-color: var(--contraste-fundo);
+        border: var(--borda);
+    }
+
+    .gerenciamento {
+        padding-right: 0;
+        border-right: none;
+        border-radius: var(--radius-base) 0 0 var(--radius-base);
+    }
+
+    .selecionar {
+        padding-left: 0;
+        border-left: none;
+        border-radius: 0 var(--radius-base) var(--radius-base) 0;
+    }
+
+
+    /* Botão "Adicionar": ícone quadrado (o <span>+</span>) + texto ao lado.
+       O subtítulo é um pseudo-elemento (::after), então não precisa de HTML novo. */
+    .gerenciamento #adicionar {
+        display: grid;
+        grid-template-columns: 48px auto;
+        grid-template-rows: auto auto;
+        justify-content: start;
+        align-items: center;
+        column-gap: 16px;
+        width: fit-content;
+        padding: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+        color: var(--letras);
+        font-size: 1rem;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .gerenciamento #adicionar span {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        /* ocupa as duas linhas do grid */
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        /* desfaz o scale/translate que o style.css usa no celular */
+        scale: none;
+        translate: none;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--cor-clara);
+        background-image: linear-gradient(135deg, var(--botao-adicionar-filme2), var(--botao-adicionar-filme1));
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgb(103 118 247 / 28%);
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .gerenciamento #adicionar:hover span {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
+
+    .gerenciamento #adicionar p {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        align-self: center;
+        font-weight: 600;
+    }
+
+    /* Subtítulo: só aparece a partir de 1280px (ver mais abaixo) */
+    .gerenciamento #adicionar::after {
+        content: "Cadastre um novo título na sua lista";
+        display: none;
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+        font-size: 0.82rem;
+        color: var(--letras-secundaria);
+    }
+
+
+    /* Filtros */
+    .selecionar .categorias {
+        width: auto;
+        height: auto;
+        gap: 16px;
+    }
+
+    .selecionar .categorias .selecao {
+        gap: 12px;
+    }
+
+    /* appearance: none remove a seta padrão do navegador; no lugar, uma seta
+       própria desenhada como imagem de fundo (SVG embutido). */
+    .selecionar .selecao select {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 170px;
+        height: 44px;
+        padding: 0 40px 0 16px;
+        background-color: var(--fundo-principal);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23899fca' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        border: var(--borda);
+        border-radius: 10px;
+        outline: none;
+        font: inherit;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .selecionar .selecao select:hover {
+        border-color: var(--destaque);
+    }
+
+    .selecionar .selecao select:focus-visible {
+        border-color: var(--destaque);
+        box-shadow: 0 0 0 3px rgb(103 118 247 / 22%);
+    }
+
+    .selecionar select option {
+        background-color: var(--contraste-fundo);
+        color: var(--letras);
+    }
+
+
+    /* Alternar entre grade e lista: dois botões dentro de uma "cápsula" */
+    .selecionar .controle {
+        align-items: center;
+        gap: 4px;
+        padding: 4px;
+        background-color: var(--fundo-principal);
+        border: var(--borda);
+        border-radius: 10px;
+    }
+
+    .selecionar .controle div:nth-child(1),
+    .selecionar .controle div:nth-child(2) {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 36px;
+        padding: 0;
+        border-radius: 8px;
+        color: var(--letras-secundaria);
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .selecionar .controle div:nth-child(1):hover,
+    .selecionar .controle div:nth-child(2):hover {
+        color: var(--letras);
+    }
+
+    /* O .selecionado vem depois para vencer as regras acima (mesma força) */
+    .selecionar .controle div.selecionado {
+        background-color: var(--destaque);
+        color: var(--cor-clara);
+    }
+
+
+
+    /* ---------- CARDS DE ESTATÍSTICAS (4 em linha) ---------- */
+
+    .atividade .dominio-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--gap-grid);
+    }
+
+    .atividade .item {
+        justify-content: flex-start;
+        padding: 20px 22px;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .atividade .item:hover {
+        transform: translateY(-3px);
+        border-color: var(--destaque);
+    }
+
+    /* A setinha não aparece no mockup */
+    .atividade .item .seta-direita {
+        display: none;
+    }
+
+    /* A propriedade "order" muda a ordem VISUAL sem mexer no HTML.
+       Ordem do mockup: Total -> Assistidos -> Não assistidos -> Nota média. */
+    #levar-aos-filmes {
+        order: 1;
+    }
+
+    #assistidos {
+        order: 2;
+    }
+
+    #nao-assistidos {
+        order: 3;
+    }
+
+    #notas {
+        order: 4;
+    }
+
+    .atividade .icon-classificacao {
+        gap: 16px;
+    }
+
+    /* Ícone: quadrado de 52px (24px do desenho + 14px de espaço em cada lado).
+       box-sizing: content-box deixa essa conta valer tanto para <i> quanto
+       para <svg> (o Font Awesome pode trocar um pelo outro). */
+    .atividade .icon-classificacao .titulos,
+    .atividade .icon-classificacao .assistidos,
+    .atividade .icon-classificacao .nao-assistidos,
+    .atividade .icon-classificacao .nota-media {
+        box-sizing: content-box;
+        width: 24px;
+        height: 24px;
+        padding: 14px;
+        border-radius: 14px;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    /* Número grande em cima, nome embaixo (column-reverse inverte a ordem
+       dos dois <p>, que no HTML vêm como nome -> número) */
+    .atividade .info-ativid {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2px;
+    }
+
+    .atividade .info-ativid p:not(.numero) {
+        font-size: 0.9rem;
+        color: var(--letras-secundaria);
+    }
+
+    .atividade .item .numero {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+
+
+    /* ---------- GRADE DE FILMES ---------- */
+
+    .catalogo-filmes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        /* "dense" preenche os buracos que os cards largos deixam */
+        grid-auto-flow: dense;
+        gap: var(--gap-grid);
+    }
+
+    /* Card: pôster à esquerda, informações à direita e os botões no rodapé.
+       Os botões usam position: absolute no canto inferior direito, então o
+       padding-bottom reserva o espaço deles (36px + 16px + 16px). */
+    .catalogo-filmes article {
+        position: relative;
+        display: grid;
+        grid-template-columns: 96px minmax(0, 1fr);
+        align-items: start;
+        gap: 14px;
+        padding: 16px 16px 68px;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* O filtro.js esconde os cards adicionando a classe .desativar.
+       Como o card acima usa display: grid (mais forte que o .desativar do
+       style.css), é preciso reforçar aqui, senão os filtros não escondem nada. */
+    .catalogo-filmes article.desativar {
+        display: none;
+    }
+
+    .catalogo-filmes article:hover {
+        transform: translateY(-4px);
+        border-color: var(--destaque);
+        box-shadow: 0 14px 30px rgb(0 0 0 / 28%);
+    }
+
+    /* Pôster em pé (proporção 2:3). No celular a imagem é "deitada" (1/0.6). */
+    .catalogo-filmes .filme-poster {
+        margin: 0;
+    }
+
+    .catalogo-filmes .filme-poster img {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .catalogo-filmes .info-serie {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    /* O cards.js põe as informações dentro de um .caixa-conteudo e o título
+       dentro de um .alinhamento-titulo. Os dois precisam poder encolher, e o
+       style.css faz do .alinhamento-titulo um flex com margem: desfazemos. */
+    .catalogo-filmes .caixa-conteudo {
+        min-width: 0;
+    }
+
+    .catalogo-filmes .info-serie div.alinhamento-titulo {
+        display: block;
+        margin: 0;
+    }
+
+    /* Título: até 3 linhas e depois corta com "..." */
+    .catalogo-filmes .info-serie h3 {
+        height: auto;
+        padding: 2px 0 0;
+        font-size: 0.95rem;
+        line-height: 1.25;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    .catalogo-filmes .info-serie .genero {
+        margin: 0;
+        font-size: 0.8rem;
+        text-align: left;
+        color: var(--letras-secundaria);
+    }
+
+    /* Linha com nota e status: um item embaixo do outro, como no mockup */
+    .catalogo-filmes .info-serie>div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 0;
+        font-size: 0.85rem;
+    }
+
+    /* Nota: o cards.js monta "<i estrela> 9.5" dentro de um <p> */
+    .catalogo-filmes .info-serie>div:last-child p {
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .catalogo-filmes .assistido,
+    .catalogo-filmes .nao-assistido {
+        padding: 5px 12px;
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+
+
+    /* Botões (info, editar, excluir) no canto inferior direito do card.
+       No cards.js eles ficam dentro do .caixa-conteudo (cards normais) ou do
+       .info-new-film (cards "Em breve"); como o article tem position: relative,
+       o absolute sempre se posiciona em relação ao card.
+       O :is() deixa o seletor um pouco mais "forte" que o do style.css
+       sem usar !important.
+       A ordem dos botões continua sendo a do style.css (info, editar, excluir). */
+    .catalogo-filmes :is(.info-serie, article) div.filme-acoes {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        width: auto;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .catalogo-filmes .filme-acoes button {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        margin: 0;
+        font-size: 0.95rem;
+        border-radius: 10px;
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .catalogo-filmes .filme-acoes button:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.25);
+    }
+
+    .catalogo-filmes .filme-acoes button:focus-visible {
+        outline: 2px solid var(--destaque);
+        outline-offset: 2px;
+    }
+
+
+    /* Modo LISTA: o direcao.js coloca .controle-grid na grade e .horizontal
+       nos cards (do 3º em diante). Aqui: 2 colunas e pôster um pouco maior. */
+    .catalogo-filmes.controle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalogo-filmes .horizontal {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .catalogo-filmes .horizontal .caixa-conteudo {
+        height: auto;
+    }
+
+    .catalogo-filmes .horizontal .info-serie h3 {
+        font-size: 1.1rem;
+    }
+
+
+    /* Cards "Em breve" (Doomsday, God Valley): destaque que ocupa 2 colunas.
+       Declarados por último para vencer as regras gerais de card acima. */
+    .catalogo-filmes .card-new-film {
+        grid-column: span 2;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px 20px 72px;
+    }
+
+    .catalogo-filmes .card-new-film .filme-poster img {
+        aspect-ratio: 2 / 3;
+        box-shadow: 0 10px 24px rgb(0 0 0 / 35%);
+    }
+
+    .catalogo-filmes .card-new-film .info-serie {
+        align-self: center;
+        gap: 10px;
+    }
+
+    .catalogo-filmes .card-new-film .info-serie h3 {
+        font-size: 1.6rem;
+        text-align: left;
+    }
+
+    .catalogo-filmes .card-new-film .info-new-film span {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    /* O cards.js cria um .caixa-conteudo vazio dentro dos cards "Em breve";
+       escondido para não abrir uma linha extra no grid do card. */
+    .catalogo-filmes .card-new-film>.caixa-conteudo:empty {
+        display: none;
+    }
+}
+
+
+
+/* ==========================================================================
+   TELAS MAIORES: mais espaço = campos maiores e mais colunas
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+
+    main .informacoes-form .area-de-pesquisa {
+        flex-basis: 340px;
+    }
+
+    .selecionar .selecao select {
+        width: 200px;
+    }
+
+    /* Agora cabe o subtítulo: título em cima, subtítulo embaixo */
+    .gerenciamento #adicionar p {
+        grid-row: 1;
+        align-self: end;
+    }
+
+    .gerenciamento #adicionar::after {
+        display: block;
+    }
+}
+
+@media (min-width: 1360px) {
+    .catalogo-filmes {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1720px) {
+    .catalogo-filmes {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .catalogo-filmes.controle-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 2100px) {
+    .catalogo-filmes {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .catalogo-filmes.controle-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

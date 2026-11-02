@@ -685,18 +685,26 @@ PARA DESKTOP
 .catalogo-filmes .info-serie h3 {
     padding: var(--medida-basica) 0px 4px;
     color: var(--letras);
+    line-height: 1.2;
+    height: 2.4em;
 }
 
 .catalogo-filmes .genero {
+    margin: 15px 0 6px;
     color: var(--letras-secundaria);
 }
 
-.catalogo-filmes .info-serie div {
+.catalogo-filmes .info-serie div:nth-last-child(1) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 3px 0px;
     font-size: 12.5px;
+}
+
+.catalogo-filmes .info-serie div:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
 }
 
 .catalogo-filmes .nota {
@@ -1062,6 +1070,7 @@ footer p {
 
 .horizontal .info-serie h3 {
     padding: 0px;
+    font-size: 1.25rem;
 }
 
 .catalogo-filmes .horizontal .info-serie div {

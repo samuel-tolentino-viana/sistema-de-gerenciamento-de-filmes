@@ -1,14 +1,14 @@
 [
     {
-        "titulo": "The Last of Us",
+        "titulo": "Attack on Titans",
         "modo": "lancado",
-        "genero": "Terror",
-        "conteudo": "serie",
-        "estadoDoFilme": "Não Assistido",
-        "notaDoFilme": 8.5,
-        "poster": "./images/series/vertical/the-last-of-us.png",
+        "genero": "Fantasia sombria",
+        "conteudo": "anime",
+        "estadoDoFilme": "Assistido",
+        "notaDoFilme": 9.2,
+        "poster": "./images/animes/vertical/attack-on-titans.png",
         "modoHorizontal": false,
-        "posterHorizontal": "./images/series/horizontal/the-last-of-us-horizontal.png"
+        "posterHorizontal": "./images/animes/horizontal/attack-on-titans-horizontal.png"
     },
     {
         "titulo": "Tokyo Revengers",
@@ -44,17 +44,6 @@
         "posterHorizontal": "./images/series/horizontal/the-flash-horizontal.png"
     },
     {
-        "titulo": "It: Bem-Vindos a Derry",
-        "modo": "lancado",
-        "genero": "Terror",
-        "conteudo": "serie",
-        "estadoDoFilme": "Não Assistido",
-        "notaDoFilme": 8.6,
-        "poster": "images/series/vertical/it-bem-vindos-a-derry.png",
-        "modoHorizontal": false,
-        "posterHorizontal": "./images/series/horizontal/it-bem-vindos-a-derry-horizontal.png"
-    },
-    {
         "titulo": "Horimya",
         "modo": "lancado",
         "genero": "Românce",
@@ -64,6 +53,17 @@
         "poster": "./images/animes/vertical/",
         "modoHorizontal": false,
         "posterHorizontal": "./images/animes/horizontal/"
+    },
+    {
+        "titulo": "Loki",
+        "modo": "lancado",
+        "genero": "Ficção científica",
+        "conteudo": "serie",
+        "estadoDoFilme": "Não Assistido",
+        "notaDoFilme": 8.2,
+        "poster": "./images/series/vertical/loki.jpg",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/series/horizontal/loki-horizontal.png"
     },
     {
         "titulo": "Como Treinar o seu Dragão 3",
@@ -96,29 +96,40 @@
         "notaDoFilme": 7.7,
         "poster": "./images/animes/vertical/dragon-ball-super-broly.png",
         "modoHorizontal": false,
-        "posterHorizontal": "./images/animes/horizontal/dragon-ball-super-broly-horizontal.png"   
+        "posterHorizontal": "./images/animes/horizontal/dragon-ball-super-broly-horizontal.png"
     },
     {
-        "titulo": "Doutor Estranho no Multiverso da Loucura",
+        "titulo": "Spider Man: brand new day",
         "modo": "lancado",
-        "genero": "Ficção científica",
+        "genero": "Aventura",
         "conteudo": "filme",
-        "estadoDoFilme":"Não Assistido",
-        "notaDoFilme": 6.8,
-        "poster": "./images/series/vertical/",
+        "estadoDoFilme": "Não Assistido",
+        "notaDoFilme": 7.9,
+        "poster": "./images/filmes/vertical/spider-man.png",
         "modoHorizontal": false,
-        "posterHorizontal": "./images/series/horizontal/"
+        "posterHorizontal": "./images/filmes/horizontal/spider-man-horizontal.png"
     },
     {
-        "titulo": "Loki",
+        "titulo": "It: Bem-Vindos a Derry",
         "modo": "lancado",
-        "genero": "Ficção científica",
+        "genero": "Terror",
         "conteudo": "serie",
         "estadoDoFilme": "Não Assistido",
-        "notaDoFilme": 8.2,
-        "poster": "./images/series/vertical/loki.jpg",
+        "notaDoFilme": 8.6,
+        "poster": "images/series/vertical/it-bem-vindos-a-derry.png",
         "modoHorizontal": false,
-        "posterHorizontal": "./images/series/horizontal/loki-horizontal.png"
+        "posterHorizontal": "./images/series/horizontal/it-bem-vindos-a-derry-horizontal.png"
+    },
+    {
+        "titulo": "The Last of Us",
+        "modo": "lancado",
+        "genero": "Terror",
+        "conteudo": "serie",
+        "estadoDoFilme": "Não Assistido",
+        "notaDoFilme": 8.5,
+        "poster": "./images/series/vertical/the-last-of-us.png",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/series/horizontal/the-last-of-us-horizontal.png"
     },
     {
         "titulo": "Barbie",
@@ -163,6 +174,17 @@
         "poster": "./images/animes/vertical/record-of-ragnarock.webp",
         "modoHorizontal": false,
         "posterHorizontal": "./images/animes/horizontal/record-of-ragnarock-horizontal.png"
+    },
+    {
+        "titulo": "Blue Lock",
+        "modo": "lancado",
+        "genero": "Shounen",
+        "conteudo": "anime",
+        "estadoDoFilme": "Assistido",
+        "notaDoFilme": 7.6,
+        "poster": "./images/animes/vertical/blue-lock.png",
+        "modoHorizontal": false,
+        "posterHorizontal": "./images/animes/horizontal/blue-lock-horizontal.png"
     },
     {
         "titulo": "Round 6",

@@ -49,10 +49,6 @@ function posterFilm(dads, cardPai) {
     const imagem = document.createElement('img');
     imagem.src = dads.poster;
 
-    if (dads.imagemCompleta) {
-        imagem.classList.add('completo');
-    }
-
     if (dads.conteudo === 'filme' || dads.conteudo === 'anime') {
         imagem.alt = `Imagem do ${dads.conteudo}: ${dads.titulo}`;
     } else if (dads.conteudo === 'serie') {
@@ -71,6 +67,11 @@ function informacoesDaSerie(dads, cardPai) {
     const tituloDoFilme = document.createElement('h3');
     tituloDoFilme.innerText = dads.titulo;
     infoSerie.appendChild(tituloDoFilme);
+
+    const caixaTitulo = document.createElement('div');
+    caixaTitulo.classList.add('alinhamento-titulo');
+    infoSerie.appendChild(caixaTitulo);
+    caixaTitulo.appendChild(tituloDoFilme);
 
     const generoFilme = document.createElement('p');
     generoFilme.classList.add('genero');
