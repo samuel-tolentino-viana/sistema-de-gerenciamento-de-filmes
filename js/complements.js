@@ -26,6 +26,12 @@ enviar.addEventListener('click', () => {
         nomeDigitado.placeholder = 'DIGITE SEU NOME!!';
     }
 
+    const nomeUsuario = document.querySelector('.apresentacao h1 .destaque');
+    const areaNomeBarraLateral = document.querySelector('.sidebar-perfil strong');
+    areaNomeBarraLateral.innerText = nomeUsuario.textContent;
+    const identificadorDaBarraLateral = document.querySelector('.sidebar-perfil .perfil-avatar');
+    identificadorDaBarraLateral.innerText = nomeUsuario.textContent.charAt(0).toUpperCase();
+
 
 });
 
@@ -121,3 +127,11 @@ if (nomeGuardado) {
     nomeDestaque.innerText = `${nomeGuardado}`;
     identificador.innerText = nomeGuardado.charAt(0).toUpperCase();
 }
+
+if (document.querySelector('.apresentacao h1 .destaque').length != 0) {
+    const nomeUsuario = document.querySelector('.apresentacao h1 .destaque');
+    const areaNomeBarraLateral = document.querySelector('.sidebar-perfil strong');
+    areaNomeBarraLateral.innerText = nomeUsuario.textContent;
+    const identificadorDaBarraLateral = document.querySelector('.sidebar-perfil .perfil-avatar');
+    identificadorDaBarraLateral.innerText = nomeUsuario.textContent.charAt(0).toUpperCase();
+};

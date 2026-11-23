@@ -997,7 +997,7 @@ footer p {
     display: flex;
     align-items: center;
     gap: 11px;
-    margin-top: auto;
+    margin-top: 20em;
     padding: 14px 10px;
     border-top: 1px solid #ffffff20;
 }
